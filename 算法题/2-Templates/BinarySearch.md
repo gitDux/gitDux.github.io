@@ -1,10 +1,30 @@
-[题目列表](https://blog.csdn.net/sinat_33641359/article/details/79064155)
+## [题目列表](https://blog.csdn.net/sinat_33641359/article/details/79064155)
 
 - [34] Search for a Range
 - [35] Search Insert Position
 - [74] Search a 2D Matrix
 - [240] Search a 2D Matrix II
 - 278、1a62、26、80、88、4、151
+
+## 框架
+
+```cpp
+int BinarySearch(vector<int> nums, int target) {
+    int left = 0, right = ...;
+
+    while (...) {
+        int mid = (left + right) / 2; //可以换成 int mid = left + (right-right) / 2 防止溢出
+        if (nums[mid] == target) { // 等号写前面
+            ...;
+        } else if (nums[mid] < target) {
+            left = ...;
+        } else if (nums[mid] > target) {
+            right = ...;
+        }
+    }
+    return ...;
+}
+```
 
 ## 例题：[34. 在排序数组中查找元素的第一个和最后一个位置](https://leetcode-cn.com/problems/find-first-and-last-position-of-element-in-sorted-array/)
 

@@ -176,25 +176,4 @@ public:
         return pre;
     }
 };
- 
-int main()
-{
-    TreeNode *root = new TreeNode(1);
-    TreeNode*l1 = new TreeNode(2);
-    TreeNode*l2 = new TreeNode(3);
-    TreeNode*l3 = new TreeNode(4);
-    TreeNode*l4 = new TreeNode(5);
-    TreeNode*l5= new TreeNode(7);
-    root->left = l1;
-    l1->left = l3;
-    root->right = l2;
-    l1->right = l4;
-    l2->right=l5;
-    Solution s1;
-    s1.morrisIn(root);
-    s1.morrisPre(root);
-    s1.morrisMid(root);
-    s1.morrisPos(root);
-    return 0;
-}
 ```
