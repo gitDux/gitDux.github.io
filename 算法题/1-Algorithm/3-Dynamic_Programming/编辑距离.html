@@ -17,6 +17,10 @@
     
             
                 
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
                 <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-folding-chapters/folding-chapters.css">
                 
             
@@ -93,7 +97,7 @@
 
     
         
-        <li class="header">简介</li>
+        <li class="header">Home</li>
         
         
     
@@ -172,21 +176,6 @@
                         <b>2.4.</b>
                     
                     计算机网络
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="2.5" data-path="../../../实用文档/">
-            
-                <a href="../../../实用文档/">
-            
-                    
-                        <b>2.5.</b>
-                    
-                    实用文档
             
                 </a>
             
@@ -1121,6 +1110,28 @@
     
 
     
+        
+        <li class="header">其他在线资料</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../../../实用文档/">
+            
+                <a href="../../../实用文档/">
+            
+                    
+                        <b>4.1.</b>
+                    
+                    文档
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
 
     <li class="divider"></li>
 
@@ -1182,15 +1193,6 @@
 <li><p>&#x4FEE;&#x6539;&#x5355;&#x8BCD; A &#x7684;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#xFF1A;&#x5982;&#x679C;&#x6211;&#x4EEC;&#x77E5;&#x9053; hors &#x5230; <code>ro</code> &#x7684;&#x7F16;&#x8F91;&#x8DDD;&#x79BB;&#x4E3A; c&#xFF0C;&#x90A3;&#x4E48;&#x663E;&#x7136; <code>horse</code>&#x5230; <code>ros</code> &#x7684;&#x7F16;&#x8F91;&#x8DDD;&#x79BB;&#x4E0D;&#x4F1A;&#x8D85;&#x8FC7; c + 1&#xFF0C;&#x539F;&#x56E0;&#x540C;&#x4E0A;&#x3002;</p>
 </li>
 </ul>
-<p>&#x82E5; A &#x548C; B &#x7684;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x5B57;&#x6BCD;&#x76F8;&#x540C;</p>
-<p>$$
-D[i][j]=min(D[i][j&#x2212;1]+1,D[i&#x2212;1][j]+1,D[i&#x2212;1][j&#x2212;1])\
-=1+min(D[i][j&#x2212;1],D[i&#x2212;1][j],D[i&#x2212;1][j&#x2212;1]&#x2212;1)</p>
-<p>$$
-&#x82E5;&#x4E0D;&#x540C;</p>
-<p>$$
-D[i][j]=1+min(D[i][j&#x2212;1],D[i&#x2212;1][j],D[i&#x2212;1][j&#x2212;1])</p>
-<p>$$</p>
 <pre><code class="lang-cpp"><span class="hljs-keyword">class</span> Solution {
 <span class="hljs-keyword">public</span>:
     <span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">minDistance</span><span class="hljs-params">(<span class="hljs-built_in">string</span> word1, <span class="hljs-built_in">string</span> word2)</span> </span>{
@@ -1265,7 +1267,7 @@ D[i][j]=1+min(D[i][j&#x2212;1],D[i&#x2212;1][j],D[i&#x2212;1][j&#x2212;1])</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"编辑距离","level":"3.2.4.5","depth":3,"next":{"title":"Other Algorithms","level":"3.2.5","depth":2,"ref":"","articles":[{"title":"洗牌算法","level":"3.2.5.1","depth":3,"path":"算法题/1-Algorithm/4-Other_Algorithms/洗牌算法.md","ref":"算法题/1-Algorithm/4-Other_Algorithms/洗牌算法.md","articles":[]}]},"previous":{"title":"正则表达式匹配","level":"3.2.4.4","depth":3,"path":"算法题/1-Algorithm/3-Dynamic_Programming/正则表达式匹配.md","ref":"算法题/1-Algorithm/3-Dynamic_Programming/正则表达式匹配.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["summary","theme-comscore","folding-chapters","livereload"],"pluginsConfig":{"livereload":{},"summary":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"folding-chapters":{},"highlight":{},"theme-comscore":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"算法题/1-Algorithm/3-Dynamic_Programming/编辑距离.md","mtime":"2021-11-19T05:25:53.068Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-04-10T15:08:32.502Z"},"basePath":"../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"编辑距离","level":"3.2.4.5","depth":3,"next":{"title":"Other Algorithms","level":"3.2.5","depth":2,"ref":"","articles":[{"title":"洗牌算法","level":"3.2.5.1","depth":3,"path":"算法题/1-Algorithm/4-Other_Algorithms/洗牌算法.md","ref":"算法题/1-Algorithm/4-Other_Algorithms/洗牌算法.md","articles":[]}]},"previous":{"title":"正则表达式匹配","level":"3.2.4.4","depth":3,"path":"算法题/1-Algorithm/3-Dynamic_Programming/正则表达式匹配.md","ref":"算法题/1-Algorithm/3-Dynamic_Programming/正则表达式匹配.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["katex","theme-comscore","folding-chapters","livereload"],"pluginsConfig":{"livereload":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"folding-chapters":{},"highlight":{},"theme-comscore":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"算法题/1-Algorithm/3-Dynamic_Programming/编辑距离.md","mtime":"2022-04-10T15:49:34.265Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-04-22T05:23:15.076Z"},"basePath":"../../..","book":{"language":""}});
         });
     </script>
 </div>
