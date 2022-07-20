@@ -1,0 +1,1388 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>可被三整除的最大和 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-folding-chapters/folding-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="最长定差子序列.html" />
+    
+    
+    <link rel="prev" href="两个字符串的删除操作.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">Home</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../../">
+            
+                <a href="../../../">
+            
+                    
+                        <b>1.1.</b>
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">八股文</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../../../八股文/操作系统.html">
+            
+                <a href="../../../八股文/操作系统.html">
+            
+                    
+                        <b>2.1.</b>
+                    
+                    操作系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../../../八股文/数据库.html">
+            
+                <a href="../../../八股文/数据库.html">
+            
+                    
+                        <b>2.2.</b>
+                    
+                    数据库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../../../八股文/数据结构与算法.html">
+            
+                <a href="../../../八股文/数据结构与算法.html">
+            
+                    
+                        <b>2.3.</b>
+                    
+                    数据结构与算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="../../../八股文/计算机网络.html">
+            
+                <a href="../../../八股文/计算机网络.html">
+            
+                    
+                        <b>2.4.</b>
+                    
+                    计算机网络
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="../../../八股文/Linux性能测试.md">
+            
+                <span>
+            
+                    
+                        <b>2.5.</b>
+                    
+                    Linux性能测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">算法题</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" >
+            
+                <span>
+            
+                    
+                        <b>3.1.</b>
+                    
+                    DataStructure
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" >
+            
+                <span>
+            
+                    
+                        <b>3.1.1.</b>
+                    
+                    Vector
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1.1" data-path="../../0-DataStructure/0-Vector/加一.html">
+            
+                <a href="../../0-DataStructure/0-Vector/加一.html">
+            
+                    
+                        <b>3.1.1.1.</b>
+                    
+                    加一
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.2" data-path="../../0-DataStructure/0-Vector/最小操作次数使数组元素相等.html">
+            
+                <a href="../../0-DataStructure/0-Vector/最小操作次数使数组元素相等.html">
+            
+                    
+                        <b>3.1.1.2.</b>
+                    
+                    最小操作次数使数组元素相等
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.3" data-path="../../0-DataStructure/0-Vector/求众数II.html">
+            
+                <a href="../../0-DataStructure/0-Vector/求众数II.html">
+            
+                    
+                        <b>3.1.1.3.</b>
+                    
+                    求众数II
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2" >
+            
+                <span>
+            
+                    
+                        <b>3.1.2.</b>
+                    
+                    TreeNode
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.2.1" >
+            
+                <span>
+            
+                    
+                        <b>3.1.2.1.</b>
+                    
+                    Trie
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.2.1.1" data-path="../../0-DataStructure/1-TreeNode/Trie/前缀树.html">
+            
+                <a href="../../0-DataStructure/1-TreeNode/Trie/前缀树.html">
+            
+                    
+                        <b>3.1.2.1.1.</b>
+                    
+                    前缀树
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2.2" >
+            
+                <span>
+            
+                    
+                        <b>3.1.2.2.</b>
+                    
+                    Binary Tree
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.2.2.1" data-path="../../0-DataStructure/1-TreeNode/binary-tree/二叉树.html">
+            
+                <a href="../../0-DataStructure/1-TreeNode/binary-tree/二叉树.html">
+            
+                    
+                        <b>3.1.2.2.1.</b>
+                    
+                    二叉树
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2.3" >
+            
+                <span>
+            
+                    
+                        <b>3.1.2.3.</b>
+                    
+                    N Ary Tree
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.2.3.1" data-path="../../0-DataStructure/1-TreeNode/n-ary-tree/N叉树的最大深度.html">
+            
+                <a href="../../0-DataStructure/1-TreeNode/n-ary-tree/N叉树的最大深度.html">
+            
+                    
+                        <b>3.1.2.3.1.</b>
+                    
+                    N叉树的最大深度
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.3" >
+            
+                <span>
+            
+                    
+                        <b>3.1.3.</b>
+                    
+                    Graph
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.3.1" data-path="../../0-DataStructure/2-Graph/图论刷题.html">
+            
+                <a href="../../0-DataStructure/2-Graph/图论刷题.html">
+            
+                    
+                        <b>3.1.3.1.</b>
+                    
+                    图论刷题
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.4" >
+            
+                <span>
+            
+                    
+                        <b>3.1.4.</b>
+                    
+                    Queue
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.4.1" data-path="../../0-DataStructure/3-Queue/滑动窗口的最大值.html">
+            
+                <a href="../../0-DataStructure/3-Queue/滑动窗口的最大值.html">
+            
+                    
+                        <b>3.1.4.1.</b>
+                    
+                    滑动窗口的最大值
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.4.2" data-path="../../0-DataStructure/3-Queue/队列的最大值.html">
+            
+                <a href="../../0-DataStructure/3-Queue/队列的最大值.html">
+            
+                    
+                        <b>3.1.4.2.</b>
+                    
+                    队列的最大值
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.5" >
+            
+                <span>
+            
+                    
+                        <b>3.1.5.</b>
+                    
+                    ListNode
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.5.1" data-path="../../0-DataStructure/4-ListNode/链表.html">
+            
+                <a href="../../0-DataStructure/4-ListNode/链表.html">
+            
+                    
+                        <b>3.1.5.1.</b>
+                    
+                    链表
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.6" >
+            
+                <span>
+            
+                    
+                        <b>3.1.6.</b>
+                    
+                    HashTable
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.6.1" data-path="../../0-DataStructure/5-HashTable/从英文中重建数字.html">
+            
+                <a href="../../0-DataStructure/5-HashTable/从英文中重建数字.html">
+            
+                    
+                        <b>3.1.6.1.</b>
+                    
+                    从英文中重建数字
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.6.2" data-path="../../0-DataStructure/5-HashTable/最大单词长度乘积.html">
+            
+                <a href="../../0-DataStructure/5-HashTable/最大单词长度乘积.html">
+            
+                    
+                        <b>3.1.6.2.</b>
+                    
+                    最大单词长度乘积
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.7" >
+            
+                <span>
+            
+                    
+                        <b>3.1.7.</b>
+                    
+                    UnionStructure
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.7.1" data-path="../../0-DataStructure/6-UnionStructure/前k个出现次数最多的字符串.html">
+            
+                <a href="../../0-DataStructure/6-UnionStructure/前k个出现次数最多的字符串.html">
+            
+                    
+                        <b>3.1.7.1.</b>
+                    
+                    前K个出现次数最多的字符串
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.8" >
+            
+                <span>
+            
+                    
+                        <b>3.1.8.</b>
+                    
+                    Stack
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.8.1" data-path="../../0-DataStructure/7-Stack/Stack.html">
+            
+                <a href="../../0-DataStructure/7-Stack/Stack.html">
+            
+                    
+                        <b>3.1.8.1.</b>
+                    
+                    Stack
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" >
+            
+                <span>
+            
+                    
+                        <b>3.2.</b>
+                    
+                    Algorithm
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.1" data-path="../0-Search_Algorithm/">
+            
+                <a href="../0-Search_Algorithm/">
+            
+                    
+                        <b>3.2.1.</b>
+                    
+                    Search Algorithm
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.1.1" >
+            
+                <span>
+            
+                    
+                        <b>3.2.1.1.</b>
+                    
+                    二分查找
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.1.1.1" data-path="../0-Search_Algorithm/二分查找/二分查找.html">
+            
+                <a href="../0-Search_Algorithm/二分查找/二分查找.html">
+            
+                    
+                        <b>3.2.1.1.1.</b>
+                    
+                    二分查找
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.1.2" >
+            
+                <span>
+            
+                    
+                        <b>3.2.1.2.</b>
+                    
+                    搜索矩阵
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.1.2.1" data-path="../0-Search_Algorithm/搜索矩阵/搜索二维矩阵.html">
+            
+                <a href="../0-Search_Algorithm/搜索矩阵/搜索二维矩阵.html">
+            
+                    
+                        <b>3.2.1.2.1.</b>
+                    
+                    搜索二维矩阵
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.1.3" >
+            
+                <span>
+            
+                    
+                        <b>3.2.1.3.</b>
+                    
+                    记忆化搜索
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.1.3.1" data-path="../0-Search_Algorithm/记忆化搜索/整数替换.html">
+            
+                <a href="../0-Search_Algorithm/记忆化搜索/整数替换.html">
+            
+                    
+                        <b>3.2.1.3.1.</b>
+                    
+                    整数替换
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.2" >
+            
+                <span>
+            
+                    
+                        <b>3.2.2.</b>
+                    
+                    Graph Theory
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.2.1" data-path="../1-Graph_Theory/Graph_Theory.html">
+            
+                <a href="../1-Graph_Theory/Graph_Theory.html">
+            
+                    
+                        <b>3.2.2.1.</b>
+                    
+                    Graph Theory
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.3" >
+            
+                <span>
+            
+                    
+                        <b>3.2.3.</b>
+                    
+                    Number Theory
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.3.1" >
+            
+                <span>
+            
+                    
+                        <b>3.2.3.1.</b>
+                    
+                    Factor
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.3.1.1" data-path="../2-Number_Theory/factor/灯泡开关.html">
+            
+                <a href="../2-Number_Theory/factor/灯泡开关.html">
+            
+                    
+                        <b>3.2.3.1.1.</b>
+                    
+                    灯泡开关
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.4" >
+            
+                <span>
+            
+                    
+                        <b>3.2.4.</b>
+                    
+                    Dynamic Programming
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.4.1" data-path="两个字符串的删除操作.html">
+            
+                <a href="两个字符串的删除操作.html">
+            
+                    
+                        <b>3.2.4.1.</b>
+                    
+                    两个字符串的删除操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="3.2.4.2" data-path="可被三整除的最大和.html">
+            
+                <a href="可被三整除的最大和.html">
+            
+                    
+                        <b>3.2.4.2.</b>
+                    
+                    可被三整除的最大和
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.4.3" data-path="最长定差子序列.html">
+            
+                <a href="最长定差子序列.html">
+            
+                    
+                        <b>3.2.4.3.</b>
+                    
+                    最长定差子序列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.4.4" data-path="正则表达式匹配.html">
+            
+                <a href="正则表达式匹配.html">
+            
+                    
+                        <b>3.2.4.4.</b>
+                    
+                    正则表达式匹配
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.4.5" data-path="编辑距离.html">
+            
+                <a href="编辑距离.html">
+            
+                    
+                        <b>3.2.4.5.</b>
+                    
+                    编辑距离
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.5" >
+            
+                <span>
+            
+                    
+                        <b>3.2.5.</b>
+                    
+                    Other Algorithms
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.5.1" data-path="../4-Other_Algorithms/洗牌算法.html">
+            
+                <a href="../4-Other_Algorithms/洗牌算法.html">
+            
+                    
+                        <b>3.2.5.1.</b>
+                    
+                    洗牌算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" >
+            
+                <span>
+            
+                    
+                        <b>3.3.</b>
+                    
+                    Templates
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.3.1" data-path="../../2-Templates/BinarySearch.html">
+            
+                <a href="../../2-Templates/BinarySearch.html">
+            
+                    
+                        <b>3.3.1.</b>
+                    
+                    BinarySearch
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.2" data-path="../../2-Templates/BinaryTree.html">
+            
+                <a href="../../2-Templates/BinaryTree.html">
+            
+                    
+                        <b>3.3.2.</b>
+                    
+                    BinaryTree
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.3" data-path="../../2-Templates/ListNode.html">
+            
+                <a href="../../2-Templates/ListNode.html">
+            
+                    
+                        <b>3.3.3.</b>
+                    
+                    ListNode
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" >
+            
+                <span>
+            
+                    
+                        <b>3.4.</b>
+                    
+                    Tricks
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.4.1" data-path="../../3-Tricks/cppTemplate.html">
+            
+                <a href="../../3-Tricks/cppTemplate.html">
+            
+                    
+                        <b>3.4.1.</b>
+                    
+                    CppTemplate
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.2" data-path="../../3-Tricks/cppTricks.html">
+            
+                <a href="../../3-Tricks/cppTricks.html">
+            
+                    
+                        <b>3.4.2.</b>
+                    
+                    CppTricks
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.3" data-path="../../3-Tricks/pythonTricks.html">
+            
+                <a href="../../3-Tricks/pythonTricks.html">
+            
+                    
+                        <b>3.4.3.</b>
+                    
+                    PythonTricks
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">其他在线资料</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../../../实用文档/">
+            
+                <a href="../../../实用文档/">
+            
+                    
+                        <b>4.1.</b>
+                    
+                    文档
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../../.." >可被三整除的最大和</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x9898;&#x76EE;&#xFF1A;">&#x9898;&#x76EE;&#xFF1A;</h1>
+<p>&#x94FE;&#x63A5;&#xFF1A;<a href="https://leetcode-cn.com/problems/greatest-sum-divisible-by-three/" target="_blank">https://leetcode-cn.com/problems/greatest-sum-divisible-by-three/</a></p>
+<h2 id="&#x63CF;&#x8FF0;">&#x63CF;&#x8FF0;</h2>
+<blockquote>
+<p>&#x7ED9;&#x4F60;&#x4E00;&#x4E2A;&#x6574;&#x6570;&#x6570;&#x7EC4; nums&#xFF0C;&#x8BF7;&#x4F60;&#x627E;&#x51FA;&#x5E76;&#x8FD4;&#x56DE;&#x80FD;&#x88AB;&#x4E09;&#x6574;&#x9664;&#x7684;&#x5143;&#x7D20;&#x6700;&#x5927;&#x548C;&#x3002;  </p>
+<p>&#x793A;&#x4F8B; 1&#xFF1A; 
+&#x8F93;&#x5165;&#xFF1A;nums = [3,6,5,1,8]  </p>
+<p>&#x8F93;&#x51FA;&#xFF1A;18  </p>
+<p>&#x89E3;&#x91CA;&#xFF1A;&#x9009;&#x51FA;&#x6570;&#x5B57; 3, 6, 1 &#x548C; 8&#xFF0C;&#x5B83;&#x4EEC;&#x7684;&#x548C;&#x662F; 18&#xFF08;&#x53EF;&#x88AB; 3 &#x6574;&#x9664;&#x7684;&#x6700;&#x5927;&#x548C;&#xFF09;&#x3002;</p>
+</blockquote>
+<h2 id="&#x76F8;&#x5173;&#x6982;&#x5FF5;">&#x76F8;&#x5173;&#x6982;&#x5FF5;</h2>
+<pre><code>&#x52A8;&#x6001;&#x89C4;&#x5212; + &#x72B6;&#x6001;&#x673A;
+&#x8FD9;&#x4E00;&#x9898;&#x57FA;&#x4E8E;&#x4E00;&#x4E2A;&#x6734;&#x7D20;&#x7684;&#x4E8B;&#x5B9E;&#xFF1A;&#x7B54;&#x6848; &#x548C; nums&#x7684; &#x957F;&#x5EA6; &#x6B63;&#x76F8;&#x5173;
+&#x72B6;&#x6001;&#x5B9A;&#x4E49;&#xFF1A;
+    &#x6BCF;&#x4E2A;&#x4F4D;&#x7F6E;&#x5BF9;&#x4E8E;&#x4E09;&#x4E2A;&#x72B6;&#x6001;&#x5206;&#x91CF;&#xFF0C;&#x5373;&#x88AB;&#x4E09;&#x6574;&#x9664;&#x4F59;0&#x3001;1&#x3001;2&#x7684;&#x6570;&#x7684;&#x6700;&#x5927;&#x548C;&#x3002;
+</code></pre><h2 id="c-&#x4EE3;&#x7801;">C++ &#x4EE3;&#x7801;</h2>
+<pre><code class="lang-cpp"><span class="hljs-keyword">class</span> Solution {
+<span class="hljs-keyword">public</span>:
+    <span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">maxSumDivThree</span><span class="hljs-params">(<span class="hljs-built_in">vector</span>&lt;<span class="hljs-keyword">int</span>&gt;&amp; nums)</span> </span>{
+         <span class="hljs-keyword">int</span> N = nums.size();
+        <span class="hljs-keyword">int</span> remainder[<span class="hljs-number">3</span>] = {<span class="hljs-number">0</span>};
+        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; N; i++){
+            <span class="hljs-keyword">int</span> a,b,c;
+            <span class="hljs-comment">//&#x72B6;&#x6001;&#x66F4;&#x65B0;</span>
+            a = remainder[<span class="hljs-number">0</span>] + nums[i];
+            b = remainder[<span class="hljs-number">1</span>] + nums[i];
+            c = remainder[<span class="hljs-number">2</span>] + nums[i];
+            <span class="hljs-comment">//&#x72B6;&#x6001;&#x8F6C;&#x79FB;</span>
+            remainder[a%<span class="hljs-number">3</span>] = max(remainder[a%<span class="hljs-number">3</span>], a);
+            remainder[b%<span class="hljs-number">3</span>] = max(remainder[b%<span class="hljs-number">3</span>], b);
+            remainder[c%<span class="hljs-number">3</span>] = max(remainder[c%<span class="hljs-number">3</span>], c);
+        }
+        <span class="hljs-keyword">return</span> remainder[<span class="hljs-number">0</span>];
+    }
+};
+</code></pre>
+<h2 id="python-3-&#x4EE3;&#x7801;">python 3 &#x4EE3;&#x7801;</h2>
+<pre><code class="lang-python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span>:</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">maxSumDivThree</span><span class="hljs-params">(self, nums: List[int])</span> -&gt; int:</span>
+        turntable = [<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>]
+        <span class="hljs-keyword">for</span> num <span class="hljs-keyword">in</span> nums:
+            a = turntable[<span class="hljs-number">0</span>]+ num
+            b = turntable[<span class="hljs-number">1</span>]+ num
+            c = turntable[<span class="hljs-number">2</span>]+ num
+            turntable[a%<span class="hljs-number">3</span>] = max(turntable[a%<span class="hljs-number">3</span>],a)
+            turntable[b%<span class="hljs-number">3</span>] = max(turntable[b%<span class="hljs-number">3</span>],b)
+            turntable[c%<span class="hljs-number">3</span>] = max(turntable[c%<span class="hljs-number">3</span>],c)
+        <span class="hljs-keyword">return</span> turntable[<span class="hljs-number">0</span>]
+</code></pre>
+<h2 id="&#x6280;&#x5DE7;&#x603B;&#x7ED3;">&#x6280;&#x5DE7;&#x603B;&#x7ED3;</h2>
+<p>&#x4E0A;&#x9762;&#x7684;&#x4EE3;&#x7801;&#x662F;&#x505A;&#x4E86;&#x7A7A;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x4F18;&#x5316;&#x7684;&#xFF0C;&#x7528;&#x4E09;&#x4E2A;&#x6574;&#x578B;&#x7A7A;&#x95F4;&#x5C31;&#x5B58;&#x50A8;&#x7CFB;&#x7EDF;&#x7684;&#x72B6;&#x6001;&#xFF0C;&#x6BCF;&#x6B21;&#x6765;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x5143;&#x7D20;&#x5C31;&#x66F4;&#x65B0;&#x72B6;&#x6001;&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="两个字符串的删除操作.html" class="navigation navigation-prev " aria-label="Previous page: 两个字符串的删除操作">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="最长定差子序列.html" class="navigation navigation-next " aria-label="Next page: 最长定差子序列">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"可被三整除的最大和","level":"3.2.4.2","depth":3,"next":{"title":"最长定差子序列","level":"3.2.4.3","depth":3,"path":"算法题/1-Algorithm/3-Dynamic_Programming/最长定差子序列.md","ref":"算法题/1-Algorithm/3-Dynamic_Programming/最长定差子序列.md","articles":[]},"previous":{"title":"两个字符串的删除操作","level":"3.2.4.1","depth":3,"path":"算法题/1-Algorithm/3-Dynamic_Programming/两个字符串的删除操作.md","ref":"算法题/1-Algorithm/3-Dynamic_Programming/两个字符串的删除操作.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["katex","theme-comscore","folding-chapters","livereload"],"pluginsConfig":{"livereload":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"folding-chapters":{},"highlight":{},"theme-comscore":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"算法题/1-Algorithm/3-Dynamic_Programming/可被三整除的最大和.md","mtime":"2021-11-16T03:27:53.496Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-07-20T03:06:45.556Z"},"basePath":"../../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../../gitbook/gitbook.js"></script>
+    <script src="../../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-folding-chapters/folding-chapters.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+
