@@ -1,7 +1,6 @@
 #include <iostream>
 using namespace std;
 
-
 // 类的内存占用情况
 namespace mem{
     class base{
@@ -142,7 +141,16 @@ int main(){
     bool *p = boolvector;
     cout<<p<<endl;
     cout<<++p<<endl;
+    
+    cout<<"******"<<endl;
+    int* nul = nullptr;
+
+    cout<<(int)nul+1<<u"阿斯顿"<<endl;
+
+    cout<<"*****"<<endl;
+
     return 0;
+
 }
 
 
