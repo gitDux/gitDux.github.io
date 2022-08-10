@@ -18,6 +18,17 @@ fork具有==读时共享，写时复制==的机制。
 
 原文链接：https://blog.csdn.net/qq_33883085/article/details/88799947
 
+## linux 中 likely()和unlikely()
+
+likely(x)等价于x，即if(likely(x))等价于if(x)，但是它告诉gcc，x取1的可能性比较大。
+unlikely(x)等价于x，即if(unlikely(x))等价于if(x)，但是它告诉gcc，x取0的可能性比较大。
+
+gcc可以据此优化程序指令序列
+
+通过这种方式，编译器在编译过程中，会将可能性更大的代码紧跟着后面的代码，从而减少指令跳转带来的性能上的下降。
+
+likely和unlikely的功能就是添加cache的命中率，提高系统执行速度.
+
 # centos 系统性能测试命令
 
 ## 进程 CPU
