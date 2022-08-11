@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>操作系统.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+@font-face{font-family:KaTeX_AMS;src:url(fonts/KaTeX_AMS-Regular.eot);src:url(fonts/KaTeX_AMS-Regular.eot#iefix) format('embedded-opentype'),url(fonts/KaTeX_AMS-Regular.woff2) format('woff2'),url(fonts/KaTeX_AMS-Regular.woff) format('woff'),url(fonts/KaTeX_AMS-Regular.ttf) format('ttf');font-weight:400;font-style:normal}@font-face{font-family:KaTeX_Caligraphic;src:url(fonts/KaTeX_Caligraphic-Bold.eot);src:url(fonts/KaTeX_Caligraphic-Bold.eot#iefix) format('embedded-opentype'),url(fonts/KaTeX_Caligraphic-Bold.woff2) format('woff2'),url(fonts/KaTeX_Caligraphic-Bold.woff) format('woff'),url(fonts/KaTeX_Caligraphic-Bold.ttf) format('ttf');font-weight:700;font-style:normal}@font-face{font-family:KaTeX_Caligraphic;src:url(fonts/KaTeX_Caligraphic-Regular.eot);src:url(fonts/KaTeX_Caligraphic-Regular.eot#iefix) format('embedded-opentype'),url(fonts/KaTeX_Caligraphic-Regular.woff2) format('woff2'),url(fonts/KaTeX_Caligraphic-Regular.woff) format('woff'),url(fonts/KaTeX_Caligraphic-Regular.ttf) format('ttf');font-weight:400;font-style:normal}@font-face{font-family:KaTeX_Fraktur;src:url(fonts/KaTeX_Fraktur-Bold.eot);src:url(fonts/KaTeX_Fraktur-Bold.eot#iefix) format('embedded-opentype'),url(fonts/KaTeX_Fraktur-Bold.woff2) format('woff2'),url(fonts/KaTeX_Fraktur-Bold.woff) format('woff'),url(fonts/KaTeX_Fraktur-Bold.ttf) format('ttf');font-weight:700;font-style:normal}@font-face{font-family:KaTeX_Fraktur;src:url(fonts/KaTeX_Fraktur-Regular.eot);src:url(fonts/KaTeX_Fraktur-Regular.eot#iefix) format('embedded-opentype'),url(fonts/KaTeX_Fraktur-Regular.woff2) format('woff2'),url(fonts/KaTeX_Fraktur-Regular.woff) format('woff'),url(fonts/KaTeX_Fraktur-Regular.ttf) format('ttf');font-weight:400;font-style:normal}@font-face{font-family:KaTeX_Main;src:url(fonts/KaTeX_Main-Bold.eot);src:url(fonts/KaTeX_Main-Bold.eot#iefix) format('embedded-opentype'),url(fonts/KaTeX_Main-Bold.woff2) format('woff2'),url(fonts/KaTeX_Main-Bold.woff) format('woff'),url(fonts/KaTeX_Main-Bold.ttf) format('ttf');font-weight:700;font-style:normal}@font-face{font-family:KaTeX_Main;src:url(fonts/KaTeX_Main-Italic.eot);src:url(fonts/KaTeX_Main-Italic.eot#iefix) format('embedded-opentype'),url(fonts/KaTeX_Main-Italic.woff2) format('woff2'),url(fonts/KaTeX_Main-Italic.woff) format('woff'),url(fonts/KaTeX_Main-Italic.ttf) format('ttf');font-weight:400;font-style:italic}@font-face{font-family:KaTeX_Main;src:url(fonts/KaTeX_Main-Regular.eot);src:url(fonts/KaTeX_Main-Regular.eot#iefix) format('embedded-opentype'),url(fonts/KaTeX_Main-Regular.woff2) format('woff2'),url(fonts/KaTeX_Main-Regular.woff) format('woff'),url(fonts/KaTeX_Main-Regular.ttf) format('ttf');font-weight:400;font-style:normal}@font-face{font-family:KaTeX_Math;src:url(fonts/KaTeX_Math-Italic.eot);src:url(fonts/KaTeX_Math-Italic.eot#iefix) format('embedded-opentype'),url(fonts/KaTeX_Math-Italic.woff2) format('woff2'),url(fonts/KaTeX_Math-Italic.woff) format('woff'),url(fonts/KaTeX_Math-Italic.ttf) format('ttf');font-weight:400;font-style:italic}@font-face{font-family:KaTeX_SansSerif;src:url(fonts/KaTeX_SansSerif-Regular.eot);src:url(fonts/KaTeX_SansSerif-Regular.eot#iefix) format('embedded-opentype'),url(fonts/KaTeX_SansSerif-Regular.woff2) format('woff2'),url(fonts/KaTeX_SansSerif-Regular.woff) format('woff'),url(fonts/KaTeX_SansSerif-Regular.ttf) format('ttf');font-weight:400;font-style:normal}@font-face{font-family:KaTeX_Script;src:url(fonts/KaTeX_Script-Regular.eot);src:url(fonts/KaTeX_Script-Regular.eot#iefix) format('embedded-opentype'),url(fonts/KaTeX_Script-Regular.woff2) format('woff2'),url(fonts/KaTeX_Script-Regular.woff) format('woff'),url(fonts/KaTeX_Script-Regular.ttf) format('ttf');font-weight:400;font-style:normal}@font-face{font-family:KaTeX_Size1;src:url(fonts/KaTeX_Size1-Regular.eot);src:url(fonts/KaTeX_Size1-Regular.eot#iefix) format('embedded-opentype'),url(fonts/KaTeX_Size1-Regular.woff2) format('woff2'),url(fonts/KaTeX_Size1-Regular.woff) format('woff'),url(fonts/KaTeX_Size1-Regular.ttf) format('ttf');font-weight:400;font-style:normal}@font-face{font-family:KaTeX_Size2;src:url(fonts/KaTeX_Size2-Regular.eot);src:url(fonts/KaTeX_Size2-Regular.eot#iefix) format('embedded-opentype'),url(fonts/KaTeX_Size2-Regular.woff2) format('woff2'),url(fonts/KaTeX_Size2-Regular.woff) format('woff'),url(fonts/KaTeX_Size2-Regular.ttf) format('ttf');font-weight:400;font-style:normal}@font-face{font-family:KaTeX_Size3;src:url(fonts/KaTeX_Size3-Regular.eot);src:url(fonts/KaTeX_Size3-Regular.eot#iefix) format('embedded-opentype'),url(fonts/KaTeX_Size3-Regular.woff2) format('woff2'),url(fonts/KaTeX_Size3-Regular.woff) format('woff'),url(fonts/KaTeX_Size3-Regular.ttf) format('ttf');font-weight:400;font-style:normal}@font-face{font-family:KaTeX_Size4;src:url(fonts/KaTeX_Size4-Regular.eot);src:url(fonts/KaTeX_Size4-Regular.eot#iefix) format('embedded-opentype'),url(fonts/KaTeX_Size4-Regular.woff2) format('woff2'),url(fonts/KaTeX_Size4-Regular.woff) format('woff'),url(fonts/KaTeX_Size4-Regular.ttf) format('ttf');font-weight:400;font-style:normal}@font-face{font-family:KaTeX_Typewriter;src:url(fonts/KaTeX_Typewriter-Regular.eot);src:url(fonts/KaTeX_Typewriter-Regular.eot#iefix) format('embedded-opentype'),url(fonts/KaTeX_Typewriter-Regular.woff2) format('woff2'),url(fonts/KaTeX_Typewriter-Regular.woff) format('woff'),url(fonts/KaTeX_Typewriter-Regular.ttf) format('ttf');font-weight:400;font-style:normal}.katex-display{display:block;margin:1em 0;text-align:center}.katex-display>.katex{display:inline-block}.katex{font:400 1.21em KaTeX_Main;line-height:1.2;white-space:nowrap;text-indent:0}.katex .katex-html{display:inline-block}.katex .katex-mathml{position:absolute;clip:rect(1px,1px,1px,1px);padding:0;border:0;height:1px;width:1px;overflow:hidden}.katex .base,.katex .strut{display:inline-block}.katex .mathit{font-family:KaTeX_Math;font-style:italic}.katex .mathbf{font-family:KaTeX_Main;font-weight:700}.katex .amsrm,.katex .mathbb{font-family:KaTeX_AMS}.katex .mathcal{font-family:KaTeX_Caligraphic}.katex .mathfrak{font-family:KaTeX_Fraktur}.katex .mathtt{font-family:KaTeX_Typewriter}.katex .mathscr{font-family:KaTeX_Script}.katex .mathsf{font-family:KaTeX_SansSerif}.katex .mainit{font-family:KaTeX_Main;font-style:italic}.katex .textstyle>.mord+.mop{margin-left:.16667em}.katex .textstyle>.mord+.mbin{margin-left:.22222em}.katex .textstyle>.mord+.mrel{margin-left:.27778em}.katex .textstyle>.mop+.mop,.katex .textstyle>.mop+.mord,.katex .textstyle>.mord+.minner{margin-left:.16667em}.katex .textstyle>.mop+.mrel{margin-left:.27778em}.katex .textstyle>.mop+.minner{margin-left:.16667em}.katex .textstyle>.mbin+.minner,.katex .textstyle>.mbin+.mop,.katex .textstyle>.mbin+.mopen,.katex .textstyle>.mbin+.mord{margin-left:.22222em}.katex .textstyle>.mrel+.minner,.katex .textstyle>.mrel+.mop,.katex .textstyle>.mrel+.mopen,.katex .textstyle>.mrel+.mord{margin-left:.27778em}.katex .textstyle>.mclose+.mop{margin-left:.16667em}.katex .textstyle>.mclose+.mbin{margin-left:.22222em}.katex .textstyle>.mclose+.mrel{margin-left:.27778em}.katex .textstyle>.mclose+.minner,.katex .textstyle>.minner+.mop,.katex .textstyle>.minner+.mord,.katex .textstyle>.mpunct+.mclose,.katex .textstyle>.mpunct+.minner,.katex .textstyle>.mpunct+.mop,.katex .textstyle>.mpunct+.mopen,.katex .textstyle>.mpunct+.mord,.katex .textstyle>.mpunct+.mpunct,.katex .textstyle>.mpunct+.mrel{margin-left:.16667em}.katex .textstyle>.minner+.mbin{margin-left:.22222em}.katex .textstyle>.minner+.mrel{margin-left:.27778em}.katex .mclose+.mop,.katex .minner+.mop,.katex .mop+.mop,.katex .mop+.mord,.katex .mord+.mop,.katex .textstyle>.minner+.minner,.katex .textstyle>.minner+.mopen,.katex .textstyle>.minner+.mpunct{margin-left:.16667em}.katex .reset-textstyle.textstyle{font-size:1em}.katex .reset-textstyle.scriptstyle{font-size:.7em}.katex .reset-textstyle.scriptscriptstyle{font-size:.5em}.katex .reset-scriptstyle.textstyle{font-size:1.42857em}.katex .reset-scriptstyle.scriptstyle{font-size:1em}.katex .reset-scriptstyle.scriptscriptstyle{font-size:.71429em}.katex .reset-scriptscriptstyle.textstyle{font-size:2em}.katex .reset-scriptscriptstyle.scriptstyle{font-size:1.4em}.katex .reset-scriptscriptstyle.scriptscriptstyle{font-size:1em}.katex .style-wrap{position:relative}.katex .vlist{display:inline-block}.katex .vlist>span{display:block;height:0;position:relative}.katex .vlist>span>span{display:inline-block}.katex .vlist .baseline-fix{display:inline-table;table-layout:fixed}.katex .msupsub{text-align:left}.katex .mfrac>span>span{text-align:center}.katex .mfrac .frac-line{width:100%}.katex .mfrac .frac-line:before{border-bottom-style:solid;border-bottom-width:1px;content:"";display:block}.katex .mfrac .frac-line:after{border-bottom-style:solid;border-bottom-width:.04em;content:"";display:block;margin-top:-1px}.katex .mspace{display:inline-block}.katex .mspace.negativethinspace{margin-left:-.16667em}.katex .mspace.thinspace{width:.16667em}.katex .mspace.mediumspace{width:.22222em}.katex .mspace.thickspace{width:.27778em}.katex .mspace.enspace{width:.5em}.katex .mspace.quad{width:1em}.katex .mspace.qquad{width:2em}.katex .llap,.katex .rlap{width:0;position:relative}.katex .llap>.inner,.katex .rlap>.inner{position:absolute}.katex .llap>.fix,.katex .rlap>.fix{display:inline-block}.katex .llap>.inner{right:0}.katex .rlap>.inner{left:0}.katex .katex-logo .a{font-size:.75em;margin-left:-.32em;position:relative;top:-.2em}.katex .katex-logo .t{margin-left:-.23em}.katex .katex-logo .e{margin-left:-.1667em;position:relative;top:.2155em}.katex .katex-logo .x{margin-left:-.125em}.katex .rule{display:inline-block;border-style:solid;position:relative}.katex .overline .overline-line{width:100%}.katex .overline .overline-line:before{border-bottom-style:solid;border-bottom-width:1px;content:"";display:block}.katex .overline .overline-line:after{border-bottom-style:solid;border-bottom-width:.04em;content:"";display:block;margin-top:-1px}.katex .sqrt>.sqrt-sign{position:relative}.katex .sqrt .sqrt-line{width:100%}.katex .sqrt .sqrt-line:before{border-bottom-style:solid;border-bottom-width:1px;content:"";display:block}.katex .sqrt .sqrt-line:after{border-bottom-style:solid;border-bottom-width:.04em;content:"";display:block;margin-top:-1px}.katex .sqrt>.root{margin-left:.27777778em;margin-right:-.55555556em}.katex .fontsize-ensurer,.katex .sizing{display:inline-block}.katex .fontsize-ensurer.reset-size1.size1,.katex .sizing.reset-size1.size1{font-size:1em}.katex .fontsize-ensurer.reset-size1.size2,.katex .sizing.reset-size1.size2{font-size:1.4em}.katex .fontsize-ensurer.reset-size1.size3,.katex .sizing.reset-size1.size3{font-size:1.6em}.katex .fontsize-ensurer.reset-size1.size4,.katex .sizing.reset-size1.size4{font-size:1.8em}.katex .fontsize-ensurer.reset-size1.size5,.katex .sizing.reset-size1.size5{font-size:2em}.katex .fontsize-ensurer.reset-size1.size6,.katex .sizing.reset-size1.size6{font-size:2.4em}.katex .fontsize-ensurer.reset-size1.size7,.katex .sizing.reset-size1.size7{font-size:2.88em}.katex .fontsize-ensurer.reset-size1.size8,.katex .sizing.reset-size1.size8{font-size:3.46em}.katex .fontsize-ensurer.reset-size1.size9,.katex .sizing.reset-size1.size9{font-size:4.14em}.katex .fontsize-ensurer.reset-size1.size10,.katex .sizing.reset-size1.size10{font-size:4.98em}.katex .fontsize-ensurer.reset-size2.size1,.katex .sizing.reset-size2.size1{font-size:.71428571em}.katex .fontsize-ensurer.reset-size2.size2,.katex .sizing.reset-size2.size2{font-size:1em}.katex .fontsize-ensurer.reset-size2.size3,.katex .sizing.reset-size2.size3{font-size:1.14285714em}.katex .fontsize-ensurer.reset-size2.size4,.katex .sizing.reset-size2.size4{font-size:1.28571429em}.katex .fontsize-ensurer.reset-size2.size5,.katex .sizing.reset-size2.size5{font-size:1.42857143em}.katex .fontsize-ensurer.reset-size2.size6,.katex .sizing.reset-size2.size6{font-size:1.71428571em}.katex .fontsize-ensurer.reset-size2.size7,.katex .sizing.reset-size2.size7{font-size:2.05714286em}.katex .fontsize-ensurer.reset-size2.size8,.katex .sizing.reset-size2.size8{font-size:2.47142857em}.katex .fontsize-ensurer.reset-size2.size9,.katex .sizing.reset-size2.size9{font-size:2.95714286em}.katex .fontsize-ensurer.reset-size2.size10,.katex .sizing.reset-size2.size10{font-size:3.55714286em}.katex .fontsize-ensurer.reset-size3.size1,.katex .sizing.reset-size3.size1{font-size:.625em}.katex .fontsize-ensurer.reset-size3.size2,.katex .sizing.reset-size3.size2{font-size:.875em}.katex .fontsize-ensurer.reset-size3.size3,.katex .sizing.reset-size3.size3{font-size:1em}.katex .fontsize-ensurer.reset-size3.size4,.katex .sizing.reset-size3.size4{font-size:1.125em}.katex .fontsize-ensurer.reset-size3.size5,.katex .sizing.reset-size3.size5{font-size:1.25em}.katex .fontsize-ensurer.reset-size3.size6,.katex .sizing.reset-size3.size6{font-size:1.5em}.katex .fontsize-ensurer.reset-size3.size7,.katex .sizing.reset-size3.size7{font-size:1.8em}.katex .fontsize-ensurer.reset-size3.size8,.katex .sizing.reset-size3.size8{font-size:2.1625em}.katex .fontsize-ensurer.reset-size3.size9,.katex .sizing.reset-size3.size9{font-size:2.5875em}.katex .fontsize-ensurer.reset-size3.size10,.katex .sizing.reset-size3.size10{font-size:3.1125em}.katex .fontsize-ensurer.reset-size4.size1,.katex .sizing.reset-size4.size1{font-size:.55555556em}.katex .fontsize-ensurer.reset-size4.size2,.katex .sizing.reset-size4.size2{font-size:.77777778em}.katex .fontsize-ensurer.reset-size4.size3,.katex .sizing.reset-size4.size3{font-size:.88888889em}.katex .fontsize-ensurer.reset-size4.size4,.katex .sizing.reset-size4.size4{font-size:1em}.katex .fontsize-ensurer.reset-size4.size5,.katex .sizing.reset-size4.size5{font-size:1.11111111em}.katex .fontsize-ensurer.reset-size4.size6,.katex .sizing.reset-size4.size6{font-size:1.33333333em}.katex .fontsize-ensurer.reset-size4.size7,.katex .sizing.reset-size4.size7{font-size:1.6em}.katex .fontsize-ensurer.reset-size4.size8,.katex .sizing.reset-size4.size8{font-size:1.92222222em}.katex .fontsize-ensurer.reset-size4.size9,.katex .sizing.reset-size4.size9{font-size:2.3em}.katex .fontsize-ensurer.reset-size4.size10,.katex .sizing.reset-size4.size10{font-size:2.76666667em}.katex .fontsize-ensurer.reset-size5.size1,.katex .sizing.reset-size5.size1{font-size:.5em}.katex .fontsize-ensurer.reset-size5.size2,.katex .sizing.reset-size5.size2{font-size:.7em}.katex .fontsize-ensurer.reset-size5.size3,.katex .sizing.reset-size5.size3{font-size:.8em}.katex .fontsize-ensurer.reset-size5.size4,.katex .sizing.reset-size5.size4{font-size:.9em}.katex .fontsize-ensurer.reset-size5.size5,.katex .sizing.reset-size5.size5{font-size:1em}.katex .fontsize-ensurer.reset-size5.size6,.katex .sizing.reset-size5.size6{font-size:1.2em}.katex .fontsize-ensurer.reset-size5.size7,.katex .sizing.reset-size5.size7{font-size:1.44em}.katex .fontsize-ensurer.reset-size5.size8,.katex .sizing.reset-size5.size8{font-size:1.73em}.katex .fontsize-ensurer.reset-size5.size9,.katex .sizing.reset-size5.size9{font-size:2.07em}.katex .fontsize-ensurer.reset-size5.size10,.katex .sizing.reset-size5.size10{font-size:2.49em}.katex .fontsize-ensurer.reset-size6.size1,.katex .sizing.reset-size6.size1{font-size:.41666667em}.katex .fontsize-ensurer.reset-size6.size2,.katex .sizing.reset-size6.size2{font-size:.58333333em}.katex .fontsize-ensurer.reset-size6.size3,.katex .sizing.reset-size6.size3{font-size:.66666667em}.katex .fontsize-ensurer.reset-size6.size4,.katex .sizing.reset-size6.size4{font-size:.75em}.katex .fontsize-ensurer.reset-size6.size5,.katex .sizing.reset-size6.size5{font-size:.83333333em}.katex .fontsize-ensurer.reset-size6.size6,.katex .sizing.reset-size6.size6{font-size:1em}.katex .fontsize-ensurer.reset-size6.size7,.katex .sizing.reset-size6.size7{font-size:1.2em}.katex .fontsize-ensurer.reset-size6.size8,.katex .sizing.reset-size6.size8{font-size:1.44166667em}.katex .fontsize-ensurer.reset-size6.size9,.katex .sizing.reset-size6.size9{font-size:1.725em}.katex .fontsize-ensurer.reset-size6.size10,.katex .sizing.reset-size6.size10{font-size:2.075em}.katex .fontsize-ensurer.reset-size7.size1,.katex .sizing.reset-size7.size1{font-size:.34722222em}.katex .fontsize-ensurer.reset-size7.size2,.katex .sizing.reset-size7.size2{font-size:.48611111em}.katex .fontsize-ensurer.reset-size7.size3,.katex .sizing.reset-size7.size3{font-size:.55555556em}.katex .fontsize-ensurer.reset-size7.size4,.katex .sizing.reset-size7.size4{font-size:.625em}.katex .fontsize-ensurer.reset-size7.size5,.katex .sizing.reset-size7.size5{font-size:.69444444em}.katex .fontsize-ensurer.reset-size7.size6,.katex .sizing.reset-size7.size6{font-size:.83333333em}.katex .fontsize-ensurer.reset-size7.size7,.katex .sizing.reset-size7.size7{font-size:1em}.katex .fontsize-ensurer.reset-size7.size8,.katex .sizing.reset-size7.size8{font-size:1.20138889em}.katex .fontsize-ensurer.reset-size7.size9,.katex .sizing.reset-size7.size9{font-size:1.4375em}.katex .fontsize-ensurer.reset-size7.size10,.katex .sizing.reset-size7.size10{font-size:1.72916667em}.katex .fontsize-ensurer.reset-size8.size1,.katex .sizing.reset-size8.size1{font-size:.28901734em}.katex .fontsize-ensurer.reset-size8.size2,.katex .sizing.reset-size8.size2{font-size:.40462428em}.katex .fontsize-ensurer.reset-size8.size3,.katex .sizing.reset-size8.size3{font-size:.46242775em}.katex .fontsize-ensurer.reset-size8.size4,.katex .sizing.reset-size8.size4{font-size:.52023121em}.katex .fontsize-ensurer.reset-size8.size5,.katex .sizing.reset-size8.size5{font-size:.57803468em}.katex .fontsize-ensurer.reset-size8.size6,.katex .sizing.reset-size8.size6{font-size:.69364162em}.katex .fontsize-ensurer.reset-size8.size7,.katex .sizing.reset-size8.size7{font-size:.83236994em}.katex .fontsize-ensurer.reset-size8.size8,.katex .sizing.reset-size8.size8{font-size:1em}.katex .fontsize-ensurer.reset-size8.size9,.katex .sizing.reset-size8.size9{font-size:1.19653179em}.katex .fontsize-ensurer.reset-size8.size10,.katex .sizing.reset-size8.size10{font-size:1.43930636em}.katex .fontsize-ensurer.reset-size9.size1,.katex .sizing.reset-size9.size1{font-size:.24154589em}.katex .fontsize-ensurer.reset-size9.size2,.katex .sizing.reset-size9.size2{font-size:.33816425em}.katex .fontsize-ensurer.reset-size9.size3,.katex .sizing.reset-size9.size3{font-size:.38647343em}.katex .fontsize-ensurer.reset-size9.size4,.katex .sizing.reset-size9.size4{font-size:.43478261em}.katex .fontsize-ensurer.reset-size9.size5,.katex .sizing.reset-size9.size5{font-size:.48309179em}.katex .fontsize-ensurer.reset-size9.size6,.katex .sizing.reset-size9.size6{font-size:.57971014em}.katex .fontsize-ensurer.reset-size9.size7,.katex .sizing.reset-size9.size7{font-size:.69565217em}.katex .fontsize-ensurer.reset-size9.size8,.katex .sizing.reset-size9.size8{font-size:.83574879em}.katex .fontsize-ensurer.reset-size9.size9,.katex .sizing.reset-size9.size9{font-size:1em}.katex .fontsize-ensurer.reset-size9.size10,.katex .sizing.reset-size9.size10{font-size:1.20289855em}.katex .fontsize-ensurer.reset-size10.size1,.katex .sizing.reset-size10.size1{font-size:.20080321em}.katex .fontsize-ensurer.reset-size10.size2,.katex .sizing.reset-size10.size2{font-size:.2811245em}.katex .fontsize-ensurer.reset-size10.size3,.katex .sizing.reset-size10.size3{font-size:.32128514em}.katex .fontsize-ensurer.reset-size10.size4,.katex .sizing.reset-size10.size4{font-size:.36144578em}.katex .fontsize-ensurer.reset-size10.size5,.katex .sizing.reset-size10.size5{font-size:.40160643em}.katex .fontsize-ensurer.reset-size10.size6,.katex .sizing.reset-size10.size6{font-size:.48192771em}.katex .fontsize-ensurer.reset-size10.size7,.katex .sizing.reset-size10.size7{font-size:.57831325em}.katex .fontsize-ensurer.reset-size10.size8,.katex .sizing.reset-size10.size8{font-size:.69477912em}.katex .fontsize-ensurer.reset-size10.size9,.katex .sizing.reset-size10.size9{font-size:.8313253em}.katex .fontsize-ensurer.reset-size10.size10,.katex .sizing.reset-size10.size10{font-size:1em}.katex .delimsizing.size1{font-family:KaTeX_Size1}.katex .delimsizing.size2{font-family:KaTeX_Size2}.katex .delimsizing.size3{font-family:KaTeX_Size3}.katex .delimsizing.size4{font-family:KaTeX_Size4}.katex .delimsizing.mult .delim-size1>span{font-family:KaTeX_Size1}.katex .delimsizing.mult .delim-size4>span{font-family:KaTeX_Size4}.katex .nulldelimiter{display:inline-block;width:.12em}.katex .op-symbol{position:relative}.katex .op-symbol.small-op{font-family:KaTeX_Size1}.katex .op-symbol.large-op{font-family:KaTeX_Size2}.katex .accent>.vlist>span,.katex .op-limits>.vlist>span{text-align:center}.katex .accent .accent-body>span{width:0}.katex .accent .accent-body.accent-vec>span{position:relative;left:.326em}.katex .mtable .vertical-separator{display:inline-block;margin:0 -.025em;border-right:.05em solid #000}.katex .mtable .arraycolsep{display:inline-block}.katex .mtable .col-align-c>.vlist{text-align:center}.katex .mtable .col-align-l>.vlist{text-align:left}.katex .mtable .col-align-r>.vlist{text-align:right}
+</style>
+
+<style>
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family:   "HelveticaNeue-Light", sans-serif, "宋体","Segoe WPC", "Segoe UI", "SFUIText-Light","Droid Sans Fallback";
+	font-size: 18px;
+	padding: 0 12px;
+	line-height: 1.6;
+	word-wrap: break-word;
+	color: #333333;
+}
+
+.content-wrapper{
+	max-width: 860px;
+    margin: 0 auto;
+    padding: 20px 30px 40px 30px;
+    padding-top: 20px;
+    padding-bottom: 100px;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	color: #4080D0;
+	text-decoration: none;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom: 1px solid #eee;
+}
+
+
+h2{
+	padding-bottom: .3em;
+    font-size: 2em;
+    line-height: 1.225;
+    border-bottom: 1px solid #eee;
+}
+
+h3{
+	font-size: 1.75em;
+    line-height: 1.225;
+}
+
+h1, h2, h3 {
+	font-weight: bold;
+}
+
+h1 code,
+h2 code,
+h3 code,
+h4 code,
+h5 code,
+h6 code {
+	font-size: inherit;
+	line-height: auto;
+}
+
+a:hover {
+	color: #4080D0;
+	text-decoration: underline;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left: 5px solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 14px;
+	line-height: 19px;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+.mac code {
+	font-size: 12px;
+	line-height: 18px;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+/** Theming */
+
+.vscode-light,
+.vscode-light pre code {
+	color: rgb(30, 30, 30);
+}
+
+.vscode-dark,
+.vscode-dark pre code {
+	color: #DDD;
+}
+
+.vscode-high-contrast,
+.vscode-high-contrast pre code {
+	color: white;
+}
+
+.vscode-light code {
+	color: #A31515;
+}
+
+.vscode-dark code {
+	color: #D7BA7D;
+}
+
+.vscode-light pre:not(.hljs),
+.vscode-light code > div {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre:not(.hljs),
+.vscode-dark code > div {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre:not(.hljs),
+.vscode-high-contrast code > div {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+.vscode-light blockquote,
+.vscode-dark blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.vscode-high-contrast blockquote {
+	background: transparent;
+	border-color: #fff;
+}
+</style>
+
+<style>
+/*
+
+Arduino® Light Theme - Stefania Mellai <s.mellai@arduino.cc>
+
+*/
+
+.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+  background: #FFFFFF;
+}
+
+.hljs,
+.hljs-subst {
+  color: #434f54;
+}
+
+.hljs-keyword,
+.hljs-attribute,
+.hljs-selector-tag,
+.hljs-doctag,
+.hljs-name {
+  color: #00979D;
+}
+
+.hljs-built_in,
+.hljs-literal,
+.hljs-bullet,
+.hljs-code,
+.hljs-addition {
+  color: #D35400;
+}
+
+.hljs-regexp,
+.hljs-symbol,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-link,
+.hljs-selector-attr,
+.hljs-selector-pseudo {
+  color: #00979D;
+}
+
+.hljs-type,
+.hljs-string,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-quote,
+.hljs-template-tag,
+.hljs-deletion {
+  color: #005C5F;
+}
+
+.hljs-title,
+.hljs-section {
+  color: #880000;
+  font-weight: bold;
+}
+
+.hljs-comment {
+  color: rgba(149,165,166,.8);
+}
+
+.hljs-meta-keyword {
+  color: #728E00;
+}
+
+.hljs-meta {
+  color: #434f54;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+.hljs-function {
+  color: #728E00;
+}
+
+.hljs-number {
+  color: #8A7B52;  
+}
+
+</style>
+
+<style>
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+</head>
+<body>
+    <div class="content-wrapper">
+        <nav class="table-of-contents"><ol><li><a href="#%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F">操作系统</a><ol><li><a href="#%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5">基本概念</a><ol><li><a href="#%E5%8E%9F%E8%AF%AD">原语</a></li></ol></li><li><a href="#%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86">内存管理</a><ol><li><a href="#%E5%A4%9A%E7%BA%A7%E9%A1%B5%E8%A1%A8%E7%9A%84%E6%A6%82%E5%BF%B5">多级页表的概念</a></li><li><a href="#tlb-%E6%98%AF%E4%BB%80%E4%B9%88">TLB 是什么</a></li><li><a href="#%E5%A4%9A%E7%BA%A7%E9%A1%B5%E8%A1%A8%E7%9A%84%E4%BC%98%E7%82%B9">多级页表的优点</a></li><li><a href="#%E5%A0%86-%E6%A0%88-%E7%9A%84%E7%94%9F%E9%95%BF%E6%96%B9%E5%90%91">堆 栈 的生长方向</a></li></ol></li><li><a href="#%E5%9F%BA%E6%9C%AC%E7%89%B9%E5%BE%81">基本特征</a><ol><li><a href="#%E5%B9%B6%E5%8F%91%E5%92%8C%E5%B9%B6%E8%A1%8C%E7%9A%84%E5%8C%BA%E5%88%AB">并发和并行的区别</a></li><li><a href="#%E5%85%B1%E4%BA%AB">共享</a></li><li><a href="#%E8%99%9A%E6%8B%9F">虚拟</a></li><li><a href="#%E5%BC%82%E6%AD%A5">异步</a></li></ol></li><li><a href="#%E5%9F%BA%E6%9C%AC%E5%8A%9F%E8%83%BD">基本功能</a><ol><li><a href="#1.-%E8%BF%9B%E7%A8%8B%E7%AE%A1%E7%90%86">1. 进程管理</a></li><li><a href="#2.-%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86">2. 内存管理</a></li><li><a href="#3.-%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86">3. 文件管理</a></li><li><a href="#4.-%E8%AE%BE%E5%A4%87%E7%AE%A1%E7%90%86">4. 设备管理</a></li></ol></li><li><a href="#%E7%B3%BB%E7%BB%9F%E8%B0%83%E7%94%A8">系统调用</a></li><li><a href="#%E5%AE%8F%E5%86%85%E6%A0%B8%E5%92%8C%E5%BE%AE%E5%86%85%E6%A0%B8">宏内核和微内核</a><ol><li><a href="#%E5%AE%8F%E5%86%85%E6%A0%B8">宏内核</a></li><li><a href="#%E5%BE%AE%E5%86%85%E6%A0%B8">微内核</a></li></ol></li><li><a href="#%E4%B8%AD%E6%96%AD%E5%88%86%E7%B1%BB">中断分类</a><ol><li><a href="#%E5%A4%96%E4%B8%AD%E6%96%AD">外中断</a></li><li><a href="#%E5%BC%82%E5%B8%B8">异常</a></li><li><a href="#%E7%B3%BB%E7%BB%9F%E8%B0%83%E7%94%A8-1">系统调用</a></li></ol></li><li><a href="#%E4%BB%80%E4%B9%88%E6%98%AF%E5%86%85%E6%A0%B8%E6%80%81%E5%92%8C%E7%94%A8%E6%88%B7%E6%80%81%EF%BC%9F">什么是内核态和用户态？</a></li><li><a href="#%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E5%86%85%E6%A0%B8%E6%80%81%E5%92%8C%E7%94%A8%E6%88%B7%E6%80%81%E7%9A%84%E5%88%87%E6%8D%A2%EF%BC%9F">如何实现内核态和用户态的切换？</a></li><li><a href="#%E4%BB%80%E4%B9%88%E6%98%AF%E8%BF%9B%E7%A8%8B%EF%BC%9F">什么是进程？</a></li><li><a href="#%E4%BB%80%E4%B9%88%E6%98%AF%E5%AE%88%E6%8A%A4%E8%BF%9B%E7%A8%8B%EF%BC%9F">什么是守护进程？</a></li><li><a href="#%E8%BF%9B%E7%A8%8B%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C">进程的基本操作</a></li><li><a href="#%E8%BF%9B%E7%A8%8B%E9%97%B4%E9%80%9A%E4%BF%A1">进程间通信</a><ol><li><a href="#%E7%AE%A1%E9%81%93">管道</a></li><li><a href="#%E5%85%B1%E4%BA%AB%E5%86%85%E5%AD%98">共享内存</a></li><li><a href="#%E4%BF%A1%E5%8F%B7">信号</a></li><li><a href="#%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97">消息队列</a></li></ol></li><li><a href="#%E8%BF%9B%E7%A8%8B%E8%B0%83%E5%BA%A6%E7%9A%84%E6%97%B6%E6%9C%BA">进程调度的时机</a></li><li><a href="#%E4%B8%8D%E8%83%BD%E8%BF%9B%E8%A1%8C%E8%BF%9B%E7%A8%8B%E8%B0%83%E5%BA%A6%E7%9A%84%E6%83%85%E5%86%B5">不能进行进程调度的情况</a></li><li><a href="#%E8%BF%9B%E7%A8%8B%E7%9A%84%E8%B0%83%E5%BA%A6%E7%AD%96%E7%95%A5">进程的调度策略</a></li><li><a href="#%E8%BF%9B%E7%A8%8B%E8%B0%83%E5%BA%A6%E7%AD%96%E7%95%A5%E7%9A%84%E5%9F%BA%E6%9C%AC%E8%AE%BE%E8%AE%A1%E6%8C%87%E6%A0%87">进程调度策略的基本设计指标</a></li><li><a href="#%E8%BF%9B%E7%A8%8B%E7%9A%84%E7%8A%B6%E6%80%81%E4%B8%8E%E7%8A%B6%E6%80%81%E8%BD%AC%E6%8D%A2">进程的状态与状态转换</a></li><li><a href="#%E4%BB%80%E4%B9%88%E6%98%AF%E5%AD%A4%E5%84%BF%E8%BF%9B%E7%A8%8B%EF%BC%9F%E5%83%B5%E5%B0%B8%E8%BF%9B%E7%A8%8B%3F">什么是孤儿进程？僵尸进程?</a></li><li><a href="#%E4%BB%80%E4%B9%88%E6%98%AF%E7%BA%BF%E7%A8%8B%EF%BC%9F">什么是线程？</a></li><li><a href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E9%9C%80%E8%A6%81%E7%BA%BF%E7%A8%8B%EF%BC%9F">为什么需要线程？</a></li><li><a href="#%E7%AE%80%E8%BF%B0%E7%BA%BF%E7%A8%8B%E5%92%8C%E8%BF%9B%E7%A8%8B%E7%9A%84%E5%8C%BA%E5%88%AB%E5%92%8C%E8%81%94%E7%B3%BB">简述线程和进程的区别和联系</a></li><li><a href="#%E8%BF%9B%E7%A8%8B%E5%92%8C%E7%BA%BF%E7%A8%8B%E7%9A%84%E5%9F%BA%E6%9C%ACapi">进程和线程的基本API</a></li><li><a href="#%E5%A4%9A%E7%BA%BF%E7%A8%8B%E6%A8%A1%E5%9E%8B">多线程模型</a></li><li><a href="#%E7%BA%BF%E7%A8%8B%E9%97%B4%E9%80%9A%E4%BF%A1%E7%9A%84%E6%96%B9%E5%BC%8F">线程间通信的方式</a></li><li><a href="#%E8%BF%9B%E7%A8%8B%E5%90%8C%E6%AD%A5%E7%9A%84%E6%96%B9%E6%B3%95">进程同步的方法</a></li><li><a href="#%E7%BA%BF%E7%A8%8B%E5%90%8C%E6%AD%A5%E7%9A%84%E6%96%B9%E6%B3%95">线程同步的方法</a></li><li><a href="#%E8%BF%9B%E7%A8%8B%E5%90%8C%E6%AD%A5%E4%B8%8E%E7%BA%BF%E7%A8%8B%E5%90%8C%E6%AD%A5%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB">进程同步与线程同步有什么区别</a></li><li><a href="#%E6%AD%BB%E9%94%81%E6%98%AF%E6%80%8E%E6%A0%B7%E4%BA%A7%E7%94%9F%E7%9A%84%EF%BC%9F">死锁是怎样产生的？</a></li><li><a href="#%E5%A6%82%E4%BD%95%E8%A7%A3%E5%86%B3%E6%AD%BB%E9%94%81%E9%97%AE%E9%A2%98%EF%BC%9F">如何解决死锁问题？</a></li><li><a href="#%E4%BB%80%E4%B9%88%E6%98%AF%E8%99%9A%E6%8B%9F%E5%9C%B0%E5%9D%80%EF%BC%8C%E4%BB%80%E4%B9%88%E6%98%AF%E7%89%A9%E7%90%86%E5%9C%B0%E5%9D%80%EF%BC%9F">什么是虚拟地址，什么是物理地址？</a></li><li><a href="#%E4%BB%80%E4%B9%88%E6%98%AF%E8%99%9A%E6%8B%9F%E5%86%85%E5%AD%98%EF%BC%9F">什么是虚拟内存？</a></li><li><a href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E5%BC%95%E5%85%A5%E8%99%9A%E6%8B%9F%E5%86%85%E5%AD%98%EF%BC%9F">为什么要引入虚拟内存？</a></li><li><a href="#%E5%B8%B8%E8%A7%81%E7%9A%84%E9%A1%B5%E9%9D%A2%E7%BD%AE%E6%8D%A2%E7%AE%97%E6%B3%95">常见的页面置换算法</a></li><li><a href="#%E8%AF%B7%E8%AF%B4%E4%B8%80%E4%B8%8B%E4%BB%80%E4%B9%88%E6%98%AF%E5%86%99%E6%97%B6%E5%A4%8D%E5%88%B6%EF%BC%9F">请说一下什么是写时复制？</a></li><li><a href="#%E5%AE%9E%E6%97%B6%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%9A%84%E6%A6%82%E5%BF%B5">实时操作系统的概念</a></li><li><a href="#%E4%BC%98%E5%85%88%E7%BA%A7%E5%8F%8D%E8%BD%AC%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F%E5%A6%82%E4%BD%95%E8%A7%A3%E5%86%B3">优先级反转是什么？如何解决</a></li></ol></li></ol></nav><h1 id="%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F" id="">操作系统</h1>
+<h2 id="%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5" id="">基本概念</h2>
+<h3 id="%E5%8E%9F%E8%AF%AD" id="">原语</h3>
+<p>原语强调的是  某个操作或者指令集合 的连续性和不可中断性；类似于数据库的事务，集合中的指令要么一个也不执行，要么全部执行</p>
+<h2 id="%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86" id="">内存管理</h2>
+<h3 id="%E5%A4%9A%E7%BA%A7%E9%A1%B5%E8%A1%A8%E7%9A%84%E6%A6%82%E5%BF%B5" id="">多级页表的概念</h3>
+<pre><code>虚拟地址和物理地址的映射关系存储在页表中，而现在页表又是分级的。64位系统一般都是3~5级。常见的配置是4级页表，就以4级页表为例说明。分别是PGD、PUD、PMD、PTE四级页表。在硬件上会有一个叫做页表基地址寄存器，它存储PGD页表的首地址。MMU就是根据页表基地址寄存器从PGD页表一路查到PTE，最终找到物理地址(PTE页表中存储物理地址)。这就像在地图上显示你的家在哪一样，我为了找到你家的地址，先确定你是中国，再确定你是某个省，继续往下某个市，最后找到你家是一样的原理。一级一级找下去。这个过程你也看到了，非常繁琐。如果第一次查到你家的具体位置，我如果记下来你的姓名和你家的地址。下次查找时，是不是只需要跟我说你的姓名是什么，我就直接能够告诉你地址，而不需要一级一级查找。四级页表查找过程需要四次内存访问。延时可想而知，非常影响性能。
+</code></pre>
+<p><img src="https://pic4.zhimg.com/80/v2-70f03a91b02fe51cced8cb57fa30d84b_720w.jpg" alt=""></p>
+<h3 id="tlb-%E6%98%AF%E4%BB%80%E4%B9%88" id="tlb">TLB 是什么</h3>
+<p>TLB （translation lookaside buffer）其实就是一块高速缓存。数据cache缓存地址(虚拟地址或者物理地址)和数据。TLB缓存虚拟地址和其映射的物理地址。TLB根据虚拟地址查找cache，它没得选，只能根据虚拟地址查找。所以TLB是一个虚拟高速缓存。硬件存在TLB后，虚拟地址到物理地址的转换过程发生了变化。虚拟地址首先发往TLB确认是否命中cache，如果cache hit直接可以得到物理地址。否则，一级一级查找页表获取物理地址。并将虚拟地址和物理地址的映射关系缓存到TLB中。</p>
+<blockquote>
+<p>参考 <a href="https://zhuanlan.zhihu.com/p/108425561">知乎</a></p>
+</blockquote>
+<h3 id="%E5%A4%9A%E7%BA%A7%E9%A1%B5%E8%A1%A8%E7%9A%84%E4%BC%98%E7%82%B9" id="">多级页表的优点</h3>
+<p>由于单级页表需要大片连续的空间，维护单级页表在存储上是奢侈和低效的。</p>
+<p>多级页表的出现可以节约内存。多级页表常用四级页表，在内存中我们只用维护一个大小为 <code>4K</code> 的一级页表（页目录表，可以管理1024个二级页表），并通过cr3寄存器记录这个页表的首地址。当二级页表不在内存中时，可以通过缺页中断将目标二级页表交换进入内存。</p>
+<blockquote>
+<p>参考 <a href="https://www.jianshu.com/p/45fa8bd131be">知乎</a></p>
+</blockquote>
+<h3 id="%E5%A0%86-%E6%A0%88-%E7%9A%84%E7%94%9F%E9%95%BF%E6%96%B9%E5%90%91" id="">堆 栈 的生长方向</h3>
+<img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimages2015.cnblogs.com%2Fblog%2F905602%2F201611%2F905602-20161105231508236-898051085.png&refer=http%3A%2F%2Fimages2015.cnblogs.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1660468814&t=0cf58e5ac9e59962fbe3aa66943e054c" alt="img" style="zoom:100%;" />
+<p>堆：生长方向是向上的，也就是向着内存地址增加的方向。</p>
+<p>栈：生长方向是向下的，是向着内存地址减小的方向增长。</p>
+<p>在内存中，堆栈公用全部自由空间，只不过搁置的启始地址和增长方向不同，它们之间并没有一个固定的界限，如果在运行时“堆”和“栈”</p>
+<h2 id="%E5%9F%BA%E6%9C%AC%E7%89%B9%E5%BE%81" id="">基本特征</h2>
+<h3 id="%E5%B9%B6%E5%8F%91%E5%92%8C%E5%B9%B6%E8%A1%8C%E7%9A%84%E5%8C%BA%E5%88%AB" id="">并发和并行的区别</h3>
+<ol>
+<li>并发（concurrency）：并发是指宏观上在一段时间内能同时运行多个程序。</li>
+<li>并行（parallelism）：同一时刻能运行多个指令。</li>
+<li>操作系统通过引入进程和线程，使得程序能够并发运行。</li>
+</ol>
+<h3 id="%E5%85%B1%E4%BA%AB" id="">共享</h3>
+<ol>
+<li>系统中的资源可以被多个并发进程共同使用。</li>
+<li>共享分为<strong>互斥共享</strong>和<strong>同时共享</strong>。</li>
+<li>互斥共享的资源称为<strong>临界资源</strong>，需要用<strong>同步机制</strong>来实现<strong>互斥访问</strong>。</li>
+</ol>
+<h3 id="%E8%99%9A%E6%8B%9F" id="">虚拟</h3>
+<p>虚拟技术把一个物理实体转换为多个逻辑实体。</p>
+<p>主要有两种虚拟技术：时（时间）分复用技术和空（空间）分复用技术。</p>
+<p><strong>多个进程能在同一个处理器上并发执行使用了时分复用技术</strong>，让每个进程轮流占用处理器，每次只执行一小个时间片并快速切换。</p>
+<p><strong>虚拟内存使用了空分复用技术</strong>，它将物理内存抽象为地址空间，每个进程都有各自的地址空间。地址空间的页被映射到物理内存，地址空间的页并不需要全部在物理内存中，当使用到一个没有在物理内存的页时，执行页面置换算法，将该页置换到内存中。</p>
+<h3 id="%E5%BC%82%E6%AD%A5" id="">异步</h3>
+<p>操作系统的异步性体现在三个方面：</p>
+<p>一是进程的异步性，进程以人们不可预知的速度向 前推进。</p>
+<p>二是程序的不可再现性，即程序执行的结果有时是不确定的。</p>
+<p>三是程序执行时间的不可预知性，即每个程序何时执行，执行顺序以及完成时间是不确定的。</p>
+<h2 id="%E5%9F%BA%E6%9C%AC%E5%8A%9F%E8%83%BD" id="">基本功能</h2>
+<h3 id="1.-%E8%BF%9B%E7%A8%8B%E7%AE%A1%E7%90%86" id="1">1. 进程管理</h3>
+<p>进程控制、进程同步、进程通信、死锁处理、处理机调度等。</p>
+<h3 id="2.-%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86" id="2">2. 内存管理</h3>
+<p>内存分配、地址映射、内存保护与共享、虚拟内存等。</p>
+<h3 id="3.-%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86" id="3">3. 文件管理</h3>
+<p>文件存储空间的管理、目录管理、文件读写管理和保护等。</p>
+<h3 id="4.-%E8%AE%BE%E5%A4%87%E7%AE%A1%E7%90%86" id="4">4. 设备管理</h3>
+<p>完成用户的 I/O 请求，方便用户使用各种设备，并提高设备的利用率。</p>
+<p>主要包括缓冲管理、设备分配、设备处理、虛拟设备等。</p>
+<h2 id="%E7%B3%BB%E7%BB%9F%E8%B0%83%E7%94%A8" id="">系统调用</h2>
+<p>如果一个进程在用户态需要使用内核态的功能，就进行系统调用从而陷入内核，由操作系统代为完成。</p>
+<img src="https://cs-notes-1256109796.cos.ap-guangzhou.myqcloud.com/tGPV0.png" alt="img" style="zoom:67%;" />
+<p>Linux 的系统调用</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Task</th>
+<th>Commands</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">进程控制</td>
+<td>fork(); exit(); wait();</td>
+</tr>
+<tr>
+<td style="text-align:center">进程通信</td>
+<td>pipe(); shmget(); mmap();</td>
+</tr>
+<tr>
+<td style="text-align:center">文件操作</td>
+<td>open(); read(); write();</td>
+</tr>
+<tr>
+<td style="text-align:center">设备操作</td>
+<td>ioctl(); read(); write();</td>
+</tr>
+<tr>
+<td style="text-align:center">信息维护</td>
+<td>getpid(); alarm(); sleep();</td>
+</tr>
+<tr>
+<td style="text-align:center">安全</td>
+<td>chmod(); umask(); chown();</td>
+</tr>
+</tbody>
+</table>
+<h2 id="%E5%AE%8F%E5%86%85%E6%A0%B8%E5%92%8C%E5%BE%AE%E5%86%85%E6%A0%B8" id="">宏内核和微内核</h2>
+<h3 id="%E5%AE%8F%E5%86%85%E6%A0%B8" id="">宏内核</h3>
+<p>宏内核是将操作系统功能作为一个紧密结合的整体放到内核。</p>
+<p>由于各模块共享信息，因此有很高的性能。</p>
+<h3 id="%E5%BE%AE%E5%86%85%E6%A0%B8" id="">微内核</h3>
+<p>由于操作系统不断复杂，因此将一部分操作系统功能移出内核，从而降低内核的复杂性。移出的部分根据分层的原则划分成若干服务，相互独立。</p>
+<p>在微内核结构下，操作系统被划分成小的、定义良好的模块，只有微内核这一个模块运行在内核态，其余模块运行在用户态。</p>
+<p>因为需要频繁地在用户态和核心态之间进行切换，所以会有一定的<strong>性能损失</strong>。</p>
+<p><img src="https://cs-notes-1256109796.cos.ap-guangzhou.myqcloud.com/2_14_microkernelArchitecture.jpg" alt="img"></p>
+<h2 id="%E4%B8%AD%E6%96%AD%E5%88%86%E7%B1%BB" id="">中断分类</h2>
+<h3 id="%E5%A4%96%E4%B8%AD%E6%96%AD" id="">外中断</h3>
+<p>由 CPU 执行指令以外的事件引起，如 I/O 完成中断，表示设备输入/输出处理已经完成，处理器能够发送下一个输入/输出请求。此外还有时钟中断、控制台中断等。</p>
+<h3 id="%E5%BC%82%E5%B8%B8" id="">异常</h3>
+<p>由 CPU 执行指令的内部事件引起，如非法操作码、地址越界、算术溢出等。</p>
+<h3 id="%E7%B3%BB%E7%BB%9F%E8%B0%83%E7%94%A8-1" id="">系统调用</h3>
+<p>在用户程序中使用系统调用。</p>
+<h2 id="%E4%BB%80%E4%B9%88%E6%98%AF%E5%86%85%E6%A0%B8%E6%80%81%E5%92%8C%E7%94%A8%E6%88%B7%E6%80%81%EF%BC%9F" id="">什么是内核态和用户态？</h2>
+<p>为了避免操作系统和关键数据被用户程序破坏，将处理器的执行状态分为内核态和用户态。</p>
+<p>内核态是操作系统管理程序执行时所处的状态，能够执行包含特权指令在内的一切指令，能够访问系统内所有的存储空间。</p>
+<p>用户态是用户程序执行时处理器所处的状态，不能执行特权指令，只能访问用户地址空间。</p>
+<p>用户程序运行在用户态,操作系统内核运行在内核态。</p>
+<h2 id="%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E5%86%85%E6%A0%B8%E6%80%81%E5%92%8C%E7%94%A8%E6%88%B7%E6%80%81%E7%9A%84%E5%88%87%E6%8D%A2%EF%BC%9F" id="">如何实现内核态和用户态的切换？</h2>
+<p>处理器从用户态切换到内核态的方法有三种：系统调用、异常和外部中断。</p>
+<ol>
+<li>系统调用是操作系统的最小功能单位，是操作系统提供的用户接口，系统调用本身是一种软中断。</li>
+<li>异常，也叫做内中断，是由错误引起的，如文件损坏、缺页故障等。</li>
+<li>外部中断，是通过两根信号线来通知处理器外设的状态变化，是硬中断。</li>
+</ol>
+<h2 id="%E4%BB%80%E4%B9%88%E6%98%AF%E8%BF%9B%E7%A8%8B%EF%BC%9F" id="">什么是进程？</h2>
+<p>进程是操作系统中最重要的抽象概念之一，是资源分配的基本单位，是独立运行的基本单位。</p>
+<p>进程的经典定义就是一个执行中程序的实例。系统中的每个程序都运行在某个进程的上下文（context）中。</p>
+<p>上下文是由程序正确运行所需的状态组成的。这个状态包括存放在内存中的程序的代码和数据，它的栈、通用目的寄存器的内容、程序计数器、环境变量以及打开文件描述符的集合。</p>
+<p>进程一般由以下的部分组成：</p>
+<ol>
+<li>进程控制块PCB，是进程存在的唯一标志，包含进程标识符PID，进程当前状态，程序和数据地址，进程优先级、CPU现场保护区（用于进程切换），占有的资源清单等。</li>
+<li>程序段</li>
+<li>数据段</li>
+</ol>
+<h2 id="%E4%BB%80%E4%B9%88%E6%98%AF%E5%AE%88%E6%8A%A4%E8%BF%9B%E7%A8%8B%EF%BC%9F" id="">什么是守护进程？</h2>
+<p>守护进程（Daemon Process），也就是通常说的 Daemon 进程（精灵进程），是 Linux 中的后台服务进程。它是一个生存期较长的进程，通常独立于控制终端并且周期性地执行某种任务或等待处理某些发生的事件。</p>
+<p>守护进程是个特殊的孤儿进程，这种进程脱离终端，为什么要脱离终端呢？之所以脱离于终端是为了避免进程被任何终端所产生的信息所打断，其在执行过程中的信息也不在任何终端上显示。由于在 linux 中，每一个系统与用户进行交流的界面称为终端，每一个从此终端开始运行的进程都会依附于这个终端，这个终端就称为这些进程的控制终端，当控制终端被关闭时，相应的进程都会自动关闭。</p>
+<h2 id="%E8%BF%9B%E7%A8%8B%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C" id="">进程的基本操作</h2>
+<p>以Unix系统举例：</p>
+<ol>
+<li>
+<p>进程的创建：fork()。新创建的子进程几乎但不完全与父进程相同。子进程得到与父进程用户级虚拟地址空间相同的(但是独立的)一份副本，包括代码和数据段、堆、共享库以及用户栈。子进程还获得与父进程任何打开文件描述符相同的副本，这就意味着当父进程调用 fork 时，子进程可以读写父进程中打开的任何文件。父进程和新创建的子进程之间最大的区别在于它们有不同的 PID。fork函数是有趣的（也常常令人迷惑）， 因为它只被调用一次，却会返回两次：一次是在调用进程（父进程）中，一次是在新创建的子进程中。在父进程中，fork 返回子进程的 PID。在子进程中，fork 返回 0。因为子进程的 PID 总是为非零，返回值就提供一个明 确的方法来分辨程序是在父进程还是在子进程中执行。</p>
+<pre class='hljs'><code><div><span class="hljs-function"><span class="hljs-keyword">pid_t</span> <span class="hljs-title">fork</span><span class="hljs-params">(<span class="hljs-keyword">void</span>)</span></span>;
+</div></code></pre>
+</li>
+<li>
+<p>回收子进程：当一个进程由于某种原因终止时，内核并不是立即把它从系统中清除。相反，进程被保持在一种已终止的状态中，直到被它的父进程回收（reaped）。当父进程回收已终止的子进程时，内核将子进程的退出状态传递给父进程，然后抛弃已终止的进程。一个进程可以通过调用 waitpid 函数来等待它的子进程终止或者停止。</p>
+<pre class='hljs'><code><div><span class="hljs-function"><span class="hljs-keyword">pid_t</span> <span class="hljs-title">waitpid</span><span class="hljs-params">(<span class="hljs-keyword">pid_t</span> pid, <span class="hljs-keyword">int</span> *statusp, <span class="hljs-keyword">int</span> options)</span></span>;
+</div></code></pre>
+</li>
+<li>
+<p>加载并运行程序：execve 函数在当前进程的上下文中加载并运行一个新程序。</p>
+<pre class='hljs'><code><div><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">execve</span><span class="hljs-params">(<span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> *filename, <span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> *argv[], <span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> *envp[])</span></span>;
+</div></code></pre>
+</li>
+<li>
+<p>进程终止：</p>
+<pre class='hljs'><code><div><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">exit</span><span class="hljs-params">(<span class="hljs-keyword">int</span> status)</span></span>;
+</div></code></pre>
+</li>
+</ol>
+<h2 id="%E8%BF%9B%E7%A8%8B%E9%97%B4%E9%80%9A%E4%BF%A1" id="">进程间通信</h2>
+<p>每个进程各自有不同的用户地址空间,任何一个进程的全局变量在另一个进程中都看不到，所以进程之间要交换数据必须通过内核,在内核中开辟一块缓冲区,进程A把数据从用户空间拷到内核缓冲区,进程B再从内核缓冲区把数据读走,内核提供的这种机制称为进程间通信。</p>
+<p>不同进程间的通信本质：进程之间可以看到一份公共资源；而提供这份资源的形式或者提供者不同，造成了通信方式不同。</p>
+<p>进程间通信主要包括管道、系统IPC（包括消息队列、信号量、信号、共享内存等）、以及套接字socket。</p>
+<h3 id="%E7%AE%A1%E9%81%93" id="">管道</h3>
+<p>管道是一种最基本的IPC机制，作用于有血缘关系的进程之间，完成数据传递。调用pipe系统函数即可创建一个管道。有如下特质：</p>
+<ol>
+<li>其本质是一个伪文件(实为内核缓冲区)</li>
+<li>由两个文件描述符引用，一个表示读端，一个表示写端。</li>
+<li>规定数据从管道的写端流入管道，从读端流出。</li>
+</ol>
+<p>管道的原理: 管道实为内核使用环形队列机制，借助内核缓冲区实现。</p>
+<p>管道的局限性：</p>
+<ol>
+<li>数据自己读不能自己写。</li>
+<li>数据一旦被读走，便不在管道中存在，不可反复读取。</li>
+<li>由于管道采用半双工通信方式。因此，数据只能在一个方向上流动。</li>
+<li>只能在有公共祖先的进程间使用管道。</li>
+</ol>
+<h3 id="%E5%85%B1%E4%BA%AB%E5%86%85%E5%AD%98" id="">共享内存</h3>
+<p>它使得多个进程可以访问同一块内存空间，不同进程可以及时看到对方进程中对共享内存中数据得更新。这种方式需要依靠某种同步操作，如互斥锁和信号量等。</p>
+<p>特点：</p>
+<ol>
+<li>共享内存是最快的一种IPC，因为进程是直接对内存进行操作来实现通信，避免了数据在用户空间和内核空间来回拷贝。</li>
+<li>因为多个进程可以同时操作，所以需要进行同步处理。</li>
+<li>信号量和共享内存通常结合在一起使用，信号量用来同步对共享内存的访问。</li>
+</ol>
+<h3 id="%E4%BF%A1%E5%8F%B7" id="">信号</h3>
+<p>一个信号就是一条小消息，它通知进程系统中发生了一个某种类型的事件。 Linux 系统上支持的30 种不同类型的信号。 每种信号类型都对应于某种系统事件。低层的硬件异常是由内核异常处理程序处理的，正常情况下，对用户进程而言是不可见的。信号提供了一种机制，通知用户进程发生了这些异常。</p>
+<ol>
+<li>
+<p>发送信号：内核通过更新目的进程上下文中的某个状态，发送（递送）一个信号给目的进程。发送信号可以有如下两种原因：</p>
+<ul>
+<li>内核检测到一个系统事件，比如除零错误或者子进程终止。</li>
+<li>—个进程调用了kill 函数， 显式地要求内核发送一个信号给目的进程。一个进程可以发送信号给它自己。</li>
+</ul>
+</li>
+<li>
+<p>接收信号：当目的进程被内核强迫以某种方式对信号的发送做出反应时，它就接收了信号。进程可以忽略这个信号，终止或者通过执行一个称为信号处理程序(signal handler)的用户层函数捕获这个信号。</p>
+</li>
+</ol>
+<h3 id="%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97" id="">消息队列</h3>
+<p>消息队列（英语：Message queue）是进程间通信或线程间通信方式。</p>
+<p>消息队列提供了异步的通信协议，每一个 queue 中的纪录包含详细说明的数据：</p>
+<ul>
+<li>发生的时间</li>
+<li>输入设备的种类</li>
+<li>特定的输入参数</li>
+</ul>
+<p>消息会保存在队列中，直到接收者取回它。</p>
+<p>消息队列可以实现<strong>异步通信</strong>。</p>
+<img src="https://img-blog.csdn.net/20180413180727198?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2NvZGVqYXM=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img" style="zoom: 50%;" />
+<ul>
+<li>Producer：消息生产者，负责产生和发送消息到Broker</li>
+<li>Broker：消息处理中心。负责消息存储、确认、重试等，一般其中会包含多个queue</li>
+<li>Consumer：消息消费者，负责从Broker中获取消息，并进行相应处理。</li>
+</ul>
+<p>特点：</p>
+<ul>
+<li><strong>异步</strong> 大多数通信协议不是异步，缺点是接收者必须轮询消息队列，才能收到最近的消息。</li>
+<li><strong>解耦</strong> 生产者和消费者之间不用相互了解，只要知道格式就行。</li>
+<li><strong>广播</strong></li>
+<li><strong>流量削峰与流控</strong> 像一个电容</li>
+</ul>
+<h2 id="%E8%BF%9B%E7%A8%8B%E8%B0%83%E5%BA%A6%E7%9A%84%E6%97%B6%E6%9C%BA" id="">进程调度的时机</h2>
+<ol>
+<li>当前运行的进程运行结束。</li>
+<li>当前运行的进程由于某种原因阻塞。</li>
+<li>执行完系统调用等系统程序后返回用户进程。</li>
+<li>在使用抢占调度的系统中，具有更高优先级的进程就绪时。</li>
+<li>分时系统中，分给当前进程的时间片用完。</li>
+</ol>
+<h2 id="%E4%B8%8D%E8%83%BD%E8%BF%9B%E8%A1%8C%E8%BF%9B%E7%A8%8B%E8%B0%83%E5%BA%A6%E7%9A%84%E6%83%85%E5%86%B5" id="">不能进行进程调度的情况</h2>
+<ol>
+<li>在中断处理程序执行时。</li>
+<li>在操作系统的内核程序临界区内。</li>
+<li>其它需要完全屏蔽中断的原子操作过程中。</li>
+</ol>
+<h2 id="%E8%BF%9B%E7%A8%8B%E7%9A%84%E8%B0%83%E5%BA%A6%E7%AD%96%E7%95%A5" id="">进程的调度策略</h2>
+<ol>
+<li>先到先服务调度算法</li>
+<li>短作业优先调度算法</li>
+<li>优先级调度算法</li>
+<li>时间片轮转调度算法</li>
+<li>高响应比优先调度算法</li>
+<li>多级队列调度算法</li>
+<li>多级反馈队列调度算法</li>
+</ol>
+<h2 id="%E8%BF%9B%E7%A8%8B%E8%B0%83%E5%BA%A6%E7%AD%96%E7%95%A5%E7%9A%84%E5%9F%BA%E6%9C%AC%E8%AE%BE%E8%AE%A1%E6%8C%87%E6%A0%87" id="">进程调度策略的基本设计指标</h2>
+<ol>
+<li>
+<p>CPU利用率</p>
+</li>
+<li>
+<p>系统吞吐率，即单位时间内CPU完成的作业的数量。</p>
+</li>
+<li>
+<p>响应时间。</p>
+</li>
+<li>
+<p>周转时间。是指作业从提交到完成的时间间隔。从每个作业的角度看，完成每个作业的时间也是很关键</p>
+<ul>
+<li>平均周转时间</li>
+<li>带权周转时间</li>
+<li>平均带权周转时间</li>
+</ul>
+</li>
+</ol>
+<h2 id="%E8%BF%9B%E7%A8%8B%E7%9A%84%E7%8A%B6%E6%80%81%E4%B8%8E%E7%8A%B6%E6%80%81%E8%BD%AC%E6%8D%A2" id="">进程的状态与状态转换</h2>
+<p>进程在运行时有三种基本状态：就绪态、运行态和阻塞态。</p>
+<ol>
+<li>运行（running）态：进程占有处理器正在运行的状态。进程已获得CPU，其程序正在执行。在单处理机系统中，只有一个进程处于执行状态； 在多处理机系统中，则有多个进程处于执行状态。</li>
+</ol>
+<p>2.就绪（ready）态：进程具备运行条件，等待系统分配处理器以便运行的状态。  当进程已分配到除CPU以外的所有必要资源后，只要再获得CPU，便可立即执行，进程这时的状态称为就绪状态。在一个系统中处于就绪状态的进程可能有多个，通常将它们排成一个队列，称为就绪队列。</p>
+<p>3.阻塞（wait）态：又称等待态或睡眠态，指进程不具备运行条件，正在等待某个时间完成的状态。</p>
+<p>各状态之间的转换：</p>
+<ol>
+<li>就绪→执行  处于就绪状态的进程，当进程调度程序为之分配了处理机后，该进程便由就绪状态转变成执行状态。</li>
+<li>执行→就绪  处于执行状态的进程在其执行过程中，因分配给它的一个时间片已用完而不得不让出处理机，于是进程从执行状态转变成就绪状态。</li>
+<li>执行→阻塞  正在执行的进程因等待某种事件发生而无法继续执行时，便从执行状态变成阻塞状态。</li>
+<li>阻塞→就绪  处于阻塞状态的进程，若其等待的事件已经发生，于是进程由阻塞状态转变为就绪状态。</li>
+</ol>
+<h2 id="%E4%BB%80%E4%B9%88%E6%98%AF%E5%AD%A4%E5%84%BF%E8%BF%9B%E7%A8%8B%EF%BC%9F%E5%83%B5%E5%B0%B8%E8%BF%9B%E7%A8%8B%3F" id="">什么是孤儿进程？僵尸进程?</h2>
+<ol>
+<li>孤儿进程： 父进程退出，子进程还在运行的这些子进程都是孤儿进程，孤儿进程将被init进程（1号进程）所收养，并由init进程对他们完成状态收集工作。</li>
+</ol>
+<p>2。 僵尸进程： 进程使用fork创建子进程，如果子进程退出，而父进程并没有调用wait 获waitpid 获取子进程的状态信息，那么子进程的进程描述符仍然保存在系统中的这些进程是僵尸进程。</p>
+<h2 id="%E4%BB%80%E4%B9%88%E6%98%AF%E7%BA%BF%E7%A8%8B%EF%BC%9F" id="">什么是线程？</h2>
+<ol>
+<li>是进程划分的任务，是一个进程内可调度的实体，是CPU调度的基本单位，用于保证程序的实时性，实现进程内部的并发。</li>
+<li>线程是操作系统可识别的最小执行和调度单位。每个线程都独自占用一个虚拟处理器：独自的寄存器组，指令计数器和处理器状态。</li>
+<li>每个线程完成不同的任务，但是属于同一个进程的不同线程之间共享同一地址空间（也就是同样的动态内存，映射文件，目标代码等等），打开的文件队列和其他内核资源。</li>
+</ol>
+<h2 id="%E4%B8%BA%E4%BB%80%E4%B9%88%E9%9C%80%E8%A6%81%E7%BA%BF%E7%A8%8B%EF%BC%9F" id="">为什么需要线程？</h2>
+<p>线程产生的原因：进程可以使多个程序能并发执行，以提高资源的利用率和系统的吞吐量；但是其具有一些缺点：</p>
+<ol>
+<li>进程在同一时刻只能做一个任务，很多时候不能充分利用CPU资源。</li>
+<li>进程在执行的过程中如果发生阻塞，整个进程就会挂起，即使进程中其它任务不依赖于等待的资源，进程仍会被阻塞。</li>
+</ol>
+<p>引入线程就是为了解决以上进程的不足，线程具有以下的优点：</p>
+<ol>
+<li>从资源上来讲，开辟一个线程所需要的资源要远小于一个进程。</li>
+<li>从切换效率上来讲，运行于一个进程中的多个线程，它们之间使用相同的地址空间，而且线程间彼此切换所需时间也远远小于进程间切换所需要的时间（这种时间的差异主要由于缓存的大量未命中导致）。</li>
+<li>从通信机制上来讲，线程间方便的通信机制。对不同进程来说，它们具有独立的地址空间，要进行数据的传递只能通过进程间通信的方式进行。线程则不然，属于同一个进程的不同线程之间共享同一地址空间，所以一个线程的数据可以被其它线程感知，线程间可以直接读写进程数据段（如全局变量）来进行通信（需要一些同步措施）。</li>
+</ol>
+<h2 id="%E7%AE%80%E8%BF%B0%E7%BA%BF%E7%A8%8B%E5%92%8C%E8%BF%9B%E7%A8%8B%E7%9A%84%E5%8C%BA%E5%88%AB%E5%92%8C%E8%81%94%E7%B3%BB" id="">简述线程和进程的区别和联系</h2>
+<ol>
+<li>一个线程只能属于一个进程，而一个进程可以有多个线程，但至少有一个线程。线程依赖于进程而存在。</li>
+<li>进程在执行过程中拥有独立的地址空间，而多个线程共享进程的地址空间。（资源分配给进程，同一进程的所有线程共享该进程的所有资源。同一进程中的多个线程共享代码段（代码和常量），数据段（全局变量和静态变量），扩展段（堆存储）。但是每个线程拥有自己的栈段，栈段又叫运行时段，用来存放所有局部变量和临时变量。）</li>
+<li>进程是资源分配的最小单位，线程是CPU调度的最小单位。</li>
+<li>通信：由于同一进程中的多个线程具有相同的地址空间，使它们之间的同步和通信的实现，也变得比较容易。进程间通信 <code>IPC</code>，线程间可以直接读写进程数据段（如全局变量）来进行通信（需要一些同步方法，以保证数据的一致性）。</li>
+<li>进程编程调试简单可靠性高，但是创建销毁开销大；线程正相反，开销小，切换速度快，但是编程调试相对复杂。</li>
+<li>进程间不会相互影响；一个进程内某个线程挂掉将导致整个进程挂掉。</li>
+<li>进程适应于多核、多机分布；线程适用于多核。</li>
+</ol>
+<h2 id="%E8%BF%9B%E7%A8%8B%E5%92%8C%E7%BA%BF%E7%A8%8B%E7%9A%84%E5%9F%BA%E6%9C%ACapi" id="api">进程和线程的基本API</h2>
+<p>进程API以Unix系统为例，线程相关的API属于Posix线程(Pthreads)标准接口。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">进程原语</th>
+<th style="text-align:center">线程原语</th>
+<th style="text-align:center">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><code>fork</code></td>
+<td style="text-align:center"><code>pthread_create</code></td>
+<td style="text-align:center">创建新的控制流</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>exit</code></td>
+<td style="text-align:center"><code>pthread_exit</code></td>
+<td style="text-align:center">从现有的控制流中退出</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>waitpid</code></td>
+<td style="text-align:center"><code>pthread_join</code></td>
+<td style="text-align:center">从控制流中得到退出状态</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>atexit</code></td>
+<td style="text-align:center"><code>pthread_cancel_push</code></td>
+<td style="text-align:center">注册在退出控制流时调用的函数</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>getpid</code></td>
+<td style="text-align:center"><code>pthread_self</code></td>
+<td style="text-align:center">获取控制流的ID</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>abort</code></td>
+<td style="text-align:center"><code>pthread_cancel</code></td>
+<td style="text-align:center">请求控制流的非正常退出</td>
+</tr>
+</tbody>
+</table>
+<h2 id="%E5%A4%9A%E7%BA%BF%E7%A8%8B%E6%A8%A1%E5%9E%8B" id="">多线程模型</h2>
+<ol>
+<li>多对一模型。将多个用户级线程映射到一个内核级线程上。该模型下，线程在用户空间进行管理，效率较高。缺点就是一个线程阻塞，整个进程内的所有线程都会阻塞。几乎没有系统继续使用这个模型。</li>
+<li>一对一模型。将内核线程与用户线程一一对应。优点是一个线程阻塞时，不会影响到其它线程的执行。该模型具有更好的并发性。缺点是内核线程数量一般有上限，会限制用户线程的数量。更多的内核线程数目也给线程切换带来额外的负担。linux和Windows操作系统家族都是使用一对一模型。</li>
+<li>多对多模型。将多个用户级线程映射到多个内核级线程上。结合了多对一模型和一对一模型的特点。</li>
+</ol>
+<h2 id="%E7%BA%BF%E7%A8%8B%E9%97%B4%E9%80%9A%E4%BF%A1%E7%9A%84%E6%96%B9%E5%BC%8F" id="">线程间通信的方式</h2>
+<ol>
+<li>临界区：通过多线程的串行化来访问公共资源，速度快，适合控制数据访问。</li>
+<li>互斥量 <code>Synchronized/Lock</code>：采用互斥对象机制，只有拥有互斥对象的线程才有访问公共资源的权限。因为互斥对象只有一个，所以可以保证公共资源不会被多个线程同时访问。</li>
+<li>信号量 <code>Semphare</code>：为控制具有有限数量的用户资源而设计的，它允许多个线程在同一时刻去访问同一个资源，但一般需要限制同一时刻访问此资源的最大线程数目。</li>
+<li>事件(信号)，Wait/Notify：通过通知操作的方式来保持多线程同步，还可以方便的实现多线程优先级的比较操作 --&gt;</li>
+</ol>
+<h2 id="%E8%BF%9B%E7%A8%8B%E5%90%8C%E6%AD%A5%E7%9A%84%E6%96%B9%E6%B3%95" id="">进程同步的方法</h2>
+<p>操作系统中，进程是具有不同的地址空间的，两个进程是不能感知到对方的存在的。有时候，需要多个进程来协同完成一些任务。
+当多个进程需要对同一个内核资源进行操作时，这些进程便是竞争的关系，操作系统必须协调各个进程对资源的占用，进程的互斥是解决进程间竞争关系的方法。 进程互斥指若干个进程要使用同一共享资源时，任何时刻最多允许一个进程去使用，其他要使用该资源的进程必须等待，直到占有资源的进程释放该资源。
+当多个进程协同完成一些任务时，不同进程的执行进度不一致，这便产生了进程的同步问题。需要操作系统干预，在特定的同步点对所有进程进行同步，这种协作进程之间相互等待对方消息或信号的协调关系称为进程同步。进程互斥本质上也是一种进程同步。
+进程的同步方法：</p>
+<ol>
+<li>互斥锁</li>
+<li>读写锁</li>
+<li>条件变量</li>
+<li>记录锁(record locking)</li>
+<li>信号量</li>
+<li>屏障（barrier）</li>
+</ol>
+<h2 id="%E7%BA%BF%E7%A8%8B%E5%90%8C%E6%AD%A5%E7%9A%84%E6%96%B9%E6%B3%95" id="">线程同步的方法</h2>
+<p>操作系统中，属于同一进程的线程之间具有相同的地址空间，线程之间共享数据变得简单高效。遇到竞争的线程同时修改同一数据或是协作的线程设置同步点的问题时，需要使用一些线程同步的方法来解决这些问题。</p>
+<p>线程同步的方法：</p>
+<ol>
+<li>互斥锁</li>
+<li>读写锁</li>
+<li>条件变量</li>
+<li>信号量</li>
+<li>自旋锁</li>
+<li>屏障（barrier）</li>
+</ol>
+<h2 id="%E8%BF%9B%E7%A8%8B%E5%90%8C%E6%AD%A5%E4%B8%8E%E7%BA%BF%E7%A8%8B%E5%90%8C%E6%AD%A5%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB" id="">进程同步与线程同步有什么区别</h2>
+<p>进程之间地址空间不同，不能感知对方的存在，同步时需要将锁放在多进程共享的空间。而线程之间共享同一地址空间，同步时把锁放在所属的同一进程空间即可。</p>
+<h2 id="%E6%AD%BB%E9%94%81%E6%98%AF%E6%80%8E%E6%A0%B7%E4%BA%A7%E7%94%9F%E7%9A%84%EF%BC%9F" id="">死锁是怎样产生的？</h2>
+<p>死锁是指两个或两个以上进程在执行过程中，因争夺资源而造成的下相互等待的现象。
+产生死锁需要满足下面四个条件：</p>
+<ol>
+<li>互斥条件：进程对所分配到的资源不允许其他进程访问，若其他进程访问该资源，只能等待，直至占有该资源的进程使用完成后释放该资源。</li>
+<li>占有并等待条件：进程获得一定的资源后，又对其他资源发出请求，但是该资源可能被其他进程占有，此时请求阻塞，但该进程不会释放自己已经占有的资源。</li>
+<li>非抢占条件：进程已获得的资源，在未完成使用之前，不可被剥夺，只能在使用后自己释放。</li>
+<li>循环等待条件：进程发生死锁后，必然存在一个进程-资源之间的环形链。</li>
+</ol>
+<h2 id="%E5%A6%82%E4%BD%95%E8%A7%A3%E5%86%B3%E6%AD%BB%E9%94%81%E9%97%AE%E9%A2%98%EF%BC%9F" id="">如何解决死锁问题？</h2>
+<p>解决死锁的方法即破坏产生死锁的四个必要条件之一，主要方法如下:</p>
+<ol>
+<li>资源一次性分配，这样就不会再有请求了（破坏请求条件）。</li>
+<li>只要有一个资源得不到分配，也不给这个进程分配其他的资源（破坏占有并等待条件）。</li>
+<li>可抢占资源：即当进程新的资源未得到满足时，释放已占有的资源，从而破坏不可抢占的条件。</li>
+<li>资源有序分配法：系统给每类资源赋予一个序号，每个进程按编号递增的请求资源，释放则相反，从而破坏环路等待的条件</li>
+</ol>
+<h2 id="%E4%BB%80%E4%B9%88%E6%98%AF%E8%99%9A%E6%8B%9F%E5%9C%B0%E5%9D%80%EF%BC%8C%E4%BB%80%E4%B9%88%E6%98%AF%E7%89%A9%E7%90%86%E5%9C%B0%E5%9D%80%EF%BC%9F" id="">什么是虚拟地址，什么是物理地址？</h2>
+<p>地址空间是一个非负整数地址的有序集合。</p>
+<p>在一个带虚拟内存的系统中，CPU 从一个有N=pow(2,n)个地址的地址空间中生成虚拟地址，这个地址空间称为虚拟地址空间（virtual address space）,现代系统通常支持 32 位或者 64 位虚拟地址空间。</p>
+<p>一个系统还有一个物理地址空间（physical address space），对应于系统中物理内存的M 个字节。</p>
+<p>地址空间的概念是很重要的，因为它清楚地区分了数据对象（字节）和它们的属性（地址）。</p>
+<p>一旦认识到了这种区别，那么我们就可以将其推广，允许每个数据对象有多个独立的地址，其中每个地址都选自一个不同的地址空间。这就是虚拟内存的基本思想。</p>
+<p>主存中的每字节都有一个选自虚拟地址空间的虚拟地址和一个选自物理地址空间的物理地址。</p>
+<h2 id="%E4%BB%80%E4%B9%88%E6%98%AF%E8%99%9A%E6%8B%9F%E5%86%85%E5%AD%98%EF%BC%9F" id="">什么是虚拟内存？</h2>
+<p>为了更加有效地管理内存并且少出错，现代系统提供了一种对主存的抽象概念，叫做虚拟内存(VM)。虚拟内存是硬件异常、硬件地址翻译、主存、磁盘文件和内核软件的完美交互，它为每个进程提供了一个大的、一致的和私有的地址空间。通过一个很清晰的机制，虚拟内存提供了三个重要的能力：</p>
+<ol>
+<li>它将主存看成是一个存储在磁盘上的地址空间的高速缓存，在主存中只保存活动区域，并根据需要在磁盘和主存之间来回传送数据，通过这种方式，它高效地使用了主存。</li>
+<li>它为每个进程提供了一致的地址空间，从而简化了内存管理。</li>
+<li>它保护了每个进程的地址空间不被其他进程破坏。</li>
+</ol>
+<h2 id="%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E5%BC%95%E5%85%A5%E8%99%9A%E6%8B%9F%E5%86%85%E5%AD%98%EF%BC%9F" id="">为什么要引入虚拟内存？</h2>
+<ol>
+<li>
+<p>虚拟内存作为缓存的工具</p>
+<ul>
+<li>虚拟内存被组织为一个由存放在磁盘上的N个连续的字节大小的单元组成的数组。</li>
+<li>虚拟内存利用DRAM缓存来自通常更大的虚拟地址空间的页面。</li>
+</ul>
+</li>
+<li>
+<p>虚拟内存作为内存管理的工具。操作系统为每个进程提供了一个独立的页表，也就是独立的虚拟地址空间。多个虚拟页面可以映射到同一个物理页面上。</p>
+<ul>
+<li>
+<p><strong>简化链接：</strong> 独立的地址空间允许每个进程的内存映像使用相同的基本格式，而不管代码和数据实际存放在物理内存的何处。</p>
+<ul>
+<li>例如：一个给定的 <code>linux</code>系统上的每个进程都是用类似的内存格式，对于64为地址空间，代码段总是从虚拟地址）<code>0x400000</code>开始，数据段，代码段，栈，堆等等。</li>
+</ul>
+</li>
+<li>
+<p><strong>简化加载：</strong> 虚拟内存还使得容易向内存中加载可执行文件和共享对象文件。要把目标文件中.text和.data节加载到一个新创建的进程中，Linux加载器为代码和数据段分配虚拟页VP，把他们<strong>标记为无效（未被缓存）</strong> ，将页表条目指向目标文件的起始位置。</p>
+<ul>
+<li><strong>加载器从不在磁盘到内存实际复制任何数据，在每个页初次被引用时，虚拟内存系统会按照需要自动的调入数据页。</strong></li>
+</ul>
+</li>
+<li>
+<p><strong>简化共享：</strong> 独立地址空间为OS提供了一个管理用户进程和操作系统自身之间共享的一致机制。</p>
+<ul>
+<li>一般：每个进程有各自私有的代码，数据，堆栈，是不和其他进程共享的，<strong>这样OS创建页表，将虚拟页映射到不连续的物理页面。</strong></li>
+<li>某些情况下，需要进程来共享代码和数据。例如每个进程调用相同的操作系统内核代码，或者C标准库函数。<strong>OS会把不同进程中适当的虚拟页面映射到相同的物理页面。</strong></li>
+</ul>
+</li>
+<li>
+<p><strong>简化内存分配：</strong> 虚拟内存向用户提供一个简单的分配额外内存的机制。当一个运行在用户进程中的程序要求额外的堆空间时（如 <code>malloc</code>），OS分配一个适当k大小个连续的虚拟内存页面，并且将他们映射到物理内存中任意位置的k个任意物理页面，<strong>因此操作系统没有必要分配k个连续的物理内存页面，页面可以随机的分散在物理内存中</strong>。</p>
+</li>
+</ul>
+</li>
+</ol>
+<ul>
+<li>虚拟内存作为内存保护的工具。不应该允许一个用户进程修改它的只读段，也不允许它修改任何内核代码和数据结构，不允许读写其他进程的私有内存，不允许修改任何与其他进程共享的虚拟页面。每次CPU生成一个地址时，<code>MMU</code>会读一个 <code>PTE</code>，通过在 <code>PTE</code>上添加一些额外的许可位来控制对一个虚拟页面内容的访问十分简单。</li>
+</ul>
+<h2 id="%E5%B8%B8%E8%A7%81%E7%9A%84%E9%A1%B5%E9%9D%A2%E7%BD%AE%E6%8D%A2%E7%AE%97%E6%B3%95" id="">常见的页面置换算法</h2>
+<p>当访问一个内存中不存在的页，并且内存已满，则需要从内存中调出一个页或将数据送至磁盘对换区，替换一个页，这种现象叫做缺页置换。当前操作系统最常采用的缺页置换算法如下：</p>
+<ul>
+<li>
+<p>先进先出(FIFO)算法：</p>
+<ul>
+<li>思路：置换最先调入内存的页面，即置换在内存中驻留时间最久的页面。</li>
+<li>实现：按照进入内存的先后次序排列成队列，从队尾进入，从队首删除。</li>
+<li>特点：实现简单；性能较差，调出的页面可能是经常访问的</li>
+</ul>
+</li>
+<li>
+<p>最近最少使用（<code>LRU</code>）算法:</p>
+<ul>
+<li>思路： 置换最近一段时间以来最长时间未访问过的页面。根据程序局部性原理，刚被访问的页面，可能马上又要被访问；而较长时间内没有被访问的页面，可能最近不会被访问。</li>
+<li>实现：缺页时，计算内存中每个逻辑页面的上一次访问时间，选择上一次使用到当前时间最长的页面</li>
+<li>特点：可能达到最优的效果，维护这样的访问链表开销比较大</li>
+</ul>
+</li>
+</ul>
+<p>当前最常采用的就是 <code>LRU</code>算法。</p>
+<ul>
+<li>
+<p>最不常用算法（<code>Least Frequently Used, LFU</code>）</p>
+<ul>
+<li>思路：缺页时，置换访问次数最少的页面</li>
+<li>实现：每个页面设置一个访问计数，访问页面时，访问计数加1，缺页时，置换计数最小的页面</li>
+<li>特点：算法开销大，开始时频繁使用，但以后不使用的页面很难置换</li>
+</ul>
+</li>
+</ul>
+<h2 id="%E8%AF%B7%E8%AF%B4%E4%B8%80%E4%B8%8B%E4%BB%80%E4%B9%88%E6%98%AF%E5%86%99%E6%97%B6%E5%A4%8D%E5%88%B6%EF%BC%9F" id="">请说一下什么是写时复制？</h2>
+<ul>
+<li>如果有多个进程要读取它们自己的那部门资源的副本，那么复制是不必要的。每个进程只要保存一个指向这个资源的指针就可以了。只要没有进程要去修改自己的“副本”，就存在着这样的幻觉：每个进程好像独占那个资源。从而就避免了复制带来的负担。如果一个进程要修改自己的那份资源“副本”，那么就会复制那份资源，并把复制的那份提供给进程。不过其中的复制对进程来说是透明的。这个进程就可以修改复制后的资源了，同时其他的进程仍然共享那份没有修改过的资源。所以这就是名称的由来：在写入时进行复制。</li>
+<li>写时复制的主要好处在于：如果进程从来就不需要修改资源，则不需要进行复制。惰性算法的好处就在于它们尽量推迟代价高昂的操作，直到必要的时刻才会去执行。</li>
+<li>在使用虚拟内存的情况下，写时复制（Copy-On-Write）是以页为基础进行的。所以，只要进程不修改它全部的地址空间，那么就不必复制整个地址空间。在fork()调用结束后，父进程和子进程都相信它们有一个自己的地址空间，但实际上它们共享父进程的原始页，接下来这些页又可以被其他的父进程或子进程共享。</li>
+</ul>
+<h2 id="%E5%AE%9E%E6%97%B6%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%9A%84%E6%A6%82%E5%BF%B5" id="">实时操作系统的概念</h2>
+<p>实时操作系统（Real-time operating system, RTOS），又称即时操作系统，它会按照排序运行、管理系统资源，并为开发应用程序提供一致的基础。 实时操作系统与一般的操作系统相比，最大的特色就是“实时性”，如果有一个任务需要执行，实时操作系统会马上（在较短时间内）执行该任务，不会有较长的延时。这种特性保证了各个任务的及时执行。</p>
+<h2 id="%E4%BC%98%E5%85%88%E7%BA%A7%E5%8F%8D%E8%BD%AC%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F%E5%A6%82%E4%BD%95%E8%A7%A3%E5%86%B3" id="">优先级反转是什么？如何解决</h2>
+<p>由于多进程共享资源，具有最高优先权的进程被低优先级进程阻塞，反而使具有中优先级的进程先于高优先级的进程执行，导致系统的崩溃。这就是所谓的优先级反转(Priority Inversion)。其实,优先级反转是在高优级(假设为A)的任务要访问一个被低优先级任务(假设为C)占有的资源时,被阻塞.而此时又有优先级高于占有资源的任务(C)而低于被阻塞的任务(A)的优先级的任务(假设为B)时,于是,占有资源的任务就被挂起(占有的资源仍为它占有),因为占有资源的任务优先级很低,所以,它可能一直被另外的任务挂起.而它占有的资源也就一直不能释放,这样,引起任务A一直没办法执行.而比它优先低的任务却可以执行。</p>
+<p>目前解决优先级反转有许多种方法。其中普遍使用的有2种方法：一种被称作优先级继承(priority inheritance)；另一种被称作优先级极限(priority ceilings)。</p>
+<ol>
+<li>优先级继承(priority inheritance) 优先级继承是指将低优先级任务的优先级提升到等待它所占有的资源的最高优先级任务的优先级.当高优先级任务由于等待资源而被阻塞时,此时资源的拥有者的优先级将会自动被提升。</li>
+<li>优先级天花板(priority ceilings)优先级天花板是指将申请某资源的任务的优先级提升到可能访问该资源的所有任务中最高优先级任务的优先级.(这个优先级称为该资源的优先级天花板)。</li>
+</ol>
+
+    </div>
+</body>
+</html>
