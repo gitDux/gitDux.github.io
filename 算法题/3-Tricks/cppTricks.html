@@ -1,0 +1,1717 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>CppTricks · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-folding-chapters/folding-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="pythonTricks.html" />
+    
+    
+    <link rel="prev" href="cppTemplate.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">Home</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                        <b>1.1.</b>
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">知识点</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../../八股文/操作系统.html">
+            
+                <a href="../../八股文/操作系统.html">
+            
+                    
+                        <b>2.1.</b>
+                    
+                    操作系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../../八股文/数据库.html">
+            
+                <a href="../../八股文/数据库.html">
+            
+                    
+                        <b>2.2.</b>
+                    
+                    数据库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../../八股文/数据结构与算法.html">
+            
+                <a href="../../八股文/数据结构与算法.html">
+            
+                    
+                        <b>2.3.</b>
+                    
+                    数据结构与算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="../../八股文/计算机网络.html">
+            
+                <a href="../../八股文/计算机网络.html">
+            
+                    
+                        <b>2.4.</b>
+                    
+                    计算机网络
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="../../八股文/Linux_c.html">
+            
+                <a href="../../八股文/Linux_c.html">
+            
+                    
+                        <b>2.5.</b>
+                    
+                    Linux_c
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="../../八股文/cpp.html">
+            
+                <a href="../../八股文/cpp.html">
+            
+                    
+                        <b>2.6.</b>
+                    
+                    cpp
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">算法题</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" >
+            
+                <span>
+            
+                    
+                        <b>3.1.</b>
+                    
+                    DataStructure
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" >
+            
+                <span>
+            
+                    
+                        <b>3.1.1.</b>
+                    
+                    Vector
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1.1" data-path="../0-DataStructure/0-Vector/加一.html">
+            
+                <a href="../0-DataStructure/0-Vector/加一.html">
+            
+                    
+                        <b>3.1.1.1.</b>
+                    
+                    加一
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.2" data-path="../0-DataStructure/0-Vector/最小操作次数使数组元素相等.html">
+            
+                <a href="../0-DataStructure/0-Vector/最小操作次数使数组元素相等.html">
+            
+                    
+                        <b>3.1.1.2.</b>
+                    
+                    最小操作次数使数组元素相等
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.3" data-path="../0-DataStructure/0-Vector/求众数II.html">
+            
+                <a href="../0-DataStructure/0-Vector/求众数II.html">
+            
+                    
+                        <b>3.1.1.3.</b>
+                    
+                    求众数II
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2" >
+            
+                <span>
+            
+                    
+                        <b>3.1.2.</b>
+                    
+                    TreeNode
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.2.1" >
+            
+                <span>
+            
+                    
+                        <b>3.1.2.1.</b>
+                    
+                    Trie
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.2.1.1" data-path="../0-DataStructure/1-TreeNode/Trie/前缀树.html">
+            
+                <a href="../0-DataStructure/1-TreeNode/Trie/前缀树.html">
+            
+                    
+                        <b>3.1.2.1.1.</b>
+                    
+                    前缀树
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2.2" >
+            
+                <span>
+            
+                    
+                        <b>3.1.2.2.</b>
+                    
+                    Binary Tree
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.2.2.1" data-path="../0-DataStructure/1-TreeNode/binary-tree/二叉树.html">
+            
+                <a href="../0-DataStructure/1-TreeNode/binary-tree/二叉树.html">
+            
+                    
+                        <b>3.1.2.2.1.</b>
+                    
+                    二叉树
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2.3" >
+            
+                <span>
+            
+                    
+                        <b>3.1.2.3.</b>
+                    
+                    N Ary Tree
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.2.3.1" data-path="../0-DataStructure/1-TreeNode/n-ary-tree/N叉树的最大深度.html">
+            
+                <a href="../0-DataStructure/1-TreeNode/n-ary-tree/N叉树的最大深度.html">
+            
+                    
+                        <b>3.1.2.3.1.</b>
+                    
+                    N叉树的最大深度
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.3" >
+            
+                <span>
+            
+                    
+                        <b>3.1.3.</b>
+                    
+                    Graph
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.3.1" data-path="../0-DataStructure/2-Graph/图论刷题.html">
+            
+                <a href="../0-DataStructure/2-Graph/图论刷题.html">
+            
+                    
+                        <b>3.1.3.1.</b>
+                    
+                    图论刷题
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.4" >
+            
+                <span>
+            
+                    
+                        <b>3.1.4.</b>
+                    
+                    Queue
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.4.1" data-path="../0-DataStructure/3-Queue/滑动窗口的最大值.html">
+            
+                <a href="../0-DataStructure/3-Queue/滑动窗口的最大值.html">
+            
+                    
+                        <b>3.1.4.1.</b>
+                    
+                    滑动窗口的最大值
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.4.2" data-path="../0-DataStructure/3-Queue/队列的最大值.html">
+            
+                <a href="../0-DataStructure/3-Queue/队列的最大值.html">
+            
+                    
+                        <b>3.1.4.2.</b>
+                    
+                    队列的最大值
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.5" >
+            
+                <span>
+            
+                    
+                        <b>3.1.5.</b>
+                    
+                    ListNode
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.5.1" data-path="../0-DataStructure/4-ListNode/链表.html">
+            
+                <a href="../0-DataStructure/4-ListNode/链表.html">
+            
+                    
+                        <b>3.1.5.1.</b>
+                    
+                    链表
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.6" >
+            
+                <span>
+            
+                    
+                        <b>3.1.6.</b>
+                    
+                    HashTable
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.6.1" data-path="../0-DataStructure/5-HashTable/从英文中重建数字.html">
+            
+                <a href="../0-DataStructure/5-HashTable/从英文中重建数字.html">
+            
+                    
+                        <b>3.1.6.1.</b>
+                    
+                    从英文中重建数字
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.6.2" data-path="../0-DataStructure/5-HashTable/最大单词长度乘积.html">
+            
+                <a href="../0-DataStructure/5-HashTable/最大单词长度乘积.html">
+            
+                    
+                        <b>3.1.6.2.</b>
+                    
+                    最大单词长度乘积
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.7" >
+            
+                <span>
+            
+                    
+                        <b>3.1.7.</b>
+                    
+                    UnionStructure
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.7.1" data-path="../0-DataStructure/6-UnionStructure/前k个出现次数最多的字符串.html">
+            
+                <a href="../0-DataStructure/6-UnionStructure/前k个出现次数最多的字符串.html">
+            
+                    
+                        <b>3.1.7.1.</b>
+                    
+                    前K个出现次数最多的字符串
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.8" >
+            
+                <span>
+            
+                    
+                        <b>3.1.8.</b>
+                    
+                    Stack
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.8.1" data-path="../0-DataStructure/7-Stack/Stack.html">
+            
+                <a href="../0-DataStructure/7-Stack/Stack.html">
+            
+                    
+                        <b>3.1.8.1.</b>
+                    
+                    Stack
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" >
+            
+                <span>
+            
+                    
+                        <b>3.2.</b>
+                    
+                    Algorithm
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.1" data-path="../1-Algorithm/0-Search_Algorithm/">
+            
+                <a href="../1-Algorithm/0-Search_Algorithm/">
+            
+                    
+                        <b>3.2.1.</b>
+                    
+                    Search Algorithm
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.1.1" >
+            
+                <span>
+            
+                    
+                        <b>3.2.1.1.</b>
+                    
+                    二分查找
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.1.1.1" data-path="../1-Algorithm/0-Search_Algorithm/二分查找/二分查找.html">
+            
+                <a href="../1-Algorithm/0-Search_Algorithm/二分查找/二分查找.html">
+            
+                    
+                        <b>3.2.1.1.1.</b>
+                    
+                    二分查找
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.1.2" >
+            
+                <span>
+            
+                    
+                        <b>3.2.1.2.</b>
+                    
+                    搜索矩阵
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.1.2.1" data-path="../1-Algorithm/0-Search_Algorithm/搜索矩阵/搜索二维矩阵.html">
+            
+                <a href="../1-Algorithm/0-Search_Algorithm/搜索矩阵/搜索二维矩阵.html">
+            
+                    
+                        <b>3.2.1.2.1.</b>
+                    
+                    搜索二维矩阵
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.1.3" >
+            
+                <span>
+            
+                    
+                        <b>3.2.1.3.</b>
+                    
+                    记忆化搜索
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.1.3.1" data-path="../1-Algorithm/0-Search_Algorithm/记忆化搜索/整数替换.html">
+            
+                <a href="../1-Algorithm/0-Search_Algorithm/记忆化搜索/整数替换.html">
+            
+                    
+                        <b>3.2.1.3.1.</b>
+                    
+                    整数替换
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.2" >
+            
+                <span>
+            
+                    
+                        <b>3.2.2.</b>
+                    
+                    Graph Theory
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.2.1" data-path="../1-Algorithm/1-Graph_Theory/Graph_Theory.html">
+            
+                <a href="../1-Algorithm/1-Graph_Theory/Graph_Theory.html">
+            
+                    
+                        <b>3.2.2.1.</b>
+                    
+                    Graph Theory
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.3" >
+            
+                <span>
+            
+                    
+                        <b>3.2.3.</b>
+                    
+                    Number Theory
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.3.1" >
+            
+                <span>
+            
+                    
+                        <b>3.2.3.1.</b>
+                    
+                    Factor
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.3.1.1" data-path="../1-Algorithm/2-Number_Theory/factor/灯泡开关.html">
+            
+                <a href="../1-Algorithm/2-Number_Theory/factor/灯泡开关.html">
+            
+                    
+                        <b>3.2.3.1.1.</b>
+                    
+                    灯泡开关
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.4" >
+            
+                <span>
+            
+                    
+                        <b>3.2.4.</b>
+                    
+                    Dynamic Programming
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.4.1" data-path="../1-Algorithm/3-Dynamic_Programming/两个字符串的删除操作.html">
+            
+                <a href="../1-Algorithm/3-Dynamic_Programming/两个字符串的删除操作.html">
+            
+                    
+                        <b>3.2.4.1.</b>
+                    
+                    两个字符串的删除操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.4.2" data-path="../1-Algorithm/3-Dynamic_Programming/可被三整除的最大和.html">
+            
+                <a href="../1-Algorithm/3-Dynamic_Programming/可被三整除的最大和.html">
+            
+                    
+                        <b>3.2.4.2.</b>
+                    
+                    可被三整除的最大和
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.4.3" data-path="../1-Algorithm/3-Dynamic_Programming/最长定差子序列.html">
+            
+                <a href="../1-Algorithm/3-Dynamic_Programming/最长定差子序列.html">
+            
+                    
+                        <b>3.2.4.3.</b>
+                    
+                    最长定差子序列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.4.4" data-path="../1-Algorithm/3-Dynamic_Programming/正则表达式匹配.html">
+            
+                <a href="../1-Algorithm/3-Dynamic_Programming/正则表达式匹配.html">
+            
+                    
+                        <b>3.2.4.4.</b>
+                    
+                    正则表达式匹配
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.4.5" data-path="../1-Algorithm/3-Dynamic_Programming/编辑距离.html">
+            
+                <a href="../1-Algorithm/3-Dynamic_Programming/编辑距离.html">
+            
+                    
+                        <b>3.2.4.5.</b>
+                    
+                    编辑距离
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.5" >
+            
+                <span>
+            
+                    
+                        <b>3.2.5.</b>
+                    
+                    Other Algorithms
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.5.1" data-path="../1-Algorithm/4-Other_Algorithms/洗牌算法.html">
+            
+                <a href="../1-Algorithm/4-Other_Algorithms/洗牌算法.html">
+            
+                    
+                        <b>3.2.5.1.</b>
+                    
+                    洗牌算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" >
+            
+                <span>
+            
+                    
+                        <b>3.3.</b>
+                    
+                    Templates
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.3.1" data-path="../2-Templates/BinarySearch.html">
+            
+                <a href="../2-Templates/BinarySearch.html">
+            
+                    
+                        <b>3.3.1.</b>
+                    
+                    BinarySearch
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.2" data-path="../2-Templates/BinaryTree.html">
+            
+                <a href="../2-Templates/BinaryTree.html">
+            
+                    
+                        <b>3.3.2.</b>
+                    
+                    BinaryTree
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.3" data-path="../2-Templates/ListNode.html">
+            
+                <a href="../2-Templates/ListNode.html">
+            
+                    
+                        <b>3.3.3.</b>
+                    
+                    ListNode
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" >
+            
+                <span>
+            
+                    
+                        <b>3.4.</b>
+                    
+                    Tricks
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.4.1" data-path="cppTemplate.html">
+            
+                <a href="cppTemplate.html">
+            
+                    
+                        <b>3.4.1.</b>
+                    
+                    CppTemplate
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="3.4.2" data-path="cppTricks.html">
+            
+                <a href="cppTricks.html">
+            
+                    
+                        <b>3.4.2.</b>
+                    
+                    CppTricks
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.3" data-path="pythonTricks.html">
+            
+                <a href="pythonTricks.html">
+            
+                    
+                        <b>3.4.3.</b>
+                    
+                    PythonTricks
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">其他在线资料</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../../实用文档/">
+            
+                <a href="../../实用文档/">
+            
+                    
+                        <b>4.1.</b>
+                    
+                    文档
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >CppTricks</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="0-&#x8BF4;&#x660E;">0 &#x8BF4;&#x660E;</h1>
+<p>&#x672C;&#x6587;&#x6863;&#x8BB0;&#x5F55;&#x4E00;&#x4E9B; C++ &#x5237;&#x9898;&#x65F6;&#x5E38;&#x7528;&#x7684;&#x51FD;&#x6570;&#x548C;&#x6280;&#x5DE7;</p>
+<h1 id="1-data-structure">1 Data structure</h1>
+<h2 id="11-vector-vector-in-cpp">1.1 vector (vector in cpp)</h2>
+<h3 id="111-vector-&#x6392;&#x5E8F;">1.1.1 vector &#x6392;&#x5E8F;</h3>
+<pre><code class="lang-cpp"><span class="hljs-comment">//default</span>
+<span class="hljs-keyword">template</span> &lt;<span class="hljs-keyword">class</span> RandomAccessIterator&gt;
+  <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">sort</span> <span class="hljs-params">(RandomAccessIterator first, RandomAccessIterator last)</span></span>;
+<span class="hljs-comment">//custom</span>
+<span class="hljs-keyword">template</span> &lt;<span class="hljs-keyword">class</span> RandomAccessIterator, <span class="hljs-keyword">class</span> Compare&gt;
+  <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">sort</span> <span class="hljs-params">(RandomAccessIterator first, RandomAccessIterator last, Compare comp)</span></span>;
+</code></pre>
+<ul>
+<li><p>&#x53C2;&#x6570;:</p>
+<ul>
+<li><strong>first, last:</strong> &#x4E24;&#x4E2A;&#x8FED;&#x4EE3;&#x5668;&#xFF0C;&#x7528;&#x6765;&#x6307;&#x5B9A;&#x8303;&#x56F4;</li>
+<li><strong>comp:</strong> &#x4EFF;&#x51FD;&#x6570; &#x7528;&#x6765;&#x81EA;&#x5B9A;&#x4E49;&#x6392;&#x5E8F;&#x65B9;&#x6CD5;</li>
+</ul>
+</li>
+<li>&#x8FD4;&#x56DE;&#x503C;&#xFF1A;None</li>
+<li>&#x4F8B;&#x5B50;&#xFF1A;<a href="http://www.cplusplus.com/reference/algorithm/sort/" target="_blank">http://www.cplusplus.com/reference/algorithm/sort/</a></li>
+<li>cpp &#x81EA;&#x5E26;&#x6A21;&#x677F;&#x4EFF;&#x51FD;&#x6570; greater &#x548C; less</li>
+</ul>
+<pre><code class="lang-cpp"><span class="hljs-keyword">template</span> &lt;<span class="hljs-keyword">class</span> T&gt; <span class="hljs-keyword">struct</span> greater {
+  <span class="hljs-function"><span class="hljs-keyword">bool</span> <span class="hljs-title">operator</span><span class="hljs-params">()</span> <span class="hljs-params">(<span class="hljs-keyword">const</span> T&amp; x, <span class="hljs-keyword">const</span> T&amp; y)</span> <span class="hljs-keyword">const</span> </span>{<span class="hljs-keyword">return</span> x&gt;y;}
+  <span class="hljs-keyword">typedef</span> T first_argument_type;
+  <span class="hljs-keyword">typedef</span> T second_argument_type;
+  <span class="hljs-keyword">typedef</span> <span class="hljs-keyword">bool</span> result_type;
+};
+sort(RandomAccessIterator first, RandomAccessIterator last, greater&lt;T&gt;) <span class="hljs-comment">//&#x7531;&#x5C0F;&#x5230;&#x5927;&#x6392;&#x5E8F;</span>
+<span class="hljs-keyword">template</span> &lt;<span class="hljs-keyword">class</span> T&gt; <span class="hljs-keyword">struct</span> less {
+  <span class="hljs-function"><span class="hljs-keyword">bool</span> <span class="hljs-title">operator</span><span class="hljs-params">()</span> <span class="hljs-params">(<span class="hljs-keyword">const</span> T&amp; x, <span class="hljs-keyword">const</span> T&amp; y)</span> <span class="hljs-keyword">const</span> </span>{<span class="hljs-keyword">return</span> x&lt;y;}
+  <span class="hljs-keyword">typedef</span> T first_argument_type;
+  <span class="hljs-keyword">typedef</span> T second_argument_type;
+  <span class="hljs-keyword">typedef</span> <span class="hljs-keyword">bool</span> result_type;
+};
+sort(RandomAccessIterator first, RandomAccessIterator last, less&lt;T&gt;) <span class="hljs-comment">//&#x7531;&#x5927;&#x5230;&#x5C0F;&#x6392;&#x5E8F;</span>
+</code></pre>
+<h4 id="&#x81EA;&#x5B9A;&#x4E49;&#x6392;&#x5E8F;">&#x81EA;&#x5B9A;&#x4E49;&#x6392;&#x5E8F;</h4>
+<pre><code class="lang-cpp"><span class="hljs-meta"># &#x666E;&#x901A;&#x51FD;&#x6570;</span>
+<span class="hljs-function"><span class="hljs-keyword">bool</span> <span class="hljs-title">myfunction</span> <span class="hljs-params">(<span class="hljs-keyword">int</span> i,<span class="hljs-keyword">int</span> j)</span> </span>{ <span class="hljs-keyword">return</span> (i&lt;j); }
+<span class="hljs-meta"># &#x4EFF;&#x51FD;&#x6570; &#x4EFF;&#x51FD;&#x6570;&#x76F8;&#x5173;&#x6D4B;&#x8BD5;&#x4EE3;&#x7801;&#x5728; test-code/functor.cpp</span>
+
+<span class="hljs-keyword">struct</span> myclass {
+  <span class="hljs-function"><span class="hljs-keyword">bool</span> <span class="hljs-title">operator</span><span class="hljs-params">()</span> <span class="hljs-params">(<span class="hljs-keyword">int</span> i,<span class="hljs-keyword">int</span> j)</span> </span>{ <span class="hljs-keyword">return</span> (i&lt;j);}
+} myobject;
+
+<span class="hljs-keyword">class</span> F1{
+<span class="hljs-keyword">public</span>:
+    <span class="hljs-function"><span class="hljs-keyword">virtual</span> <span class="hljs-keyword">bool</span> <span class="hljs-title">operator</span><span class="hljs-params">()</span><span class="hljs-params">(<span class="hljs-keyword">int</span> i, <span class="hljs-keyword">int</span> j)</span> </span>{ <span class="hljs-keyword">return</span> (i&lt;j);}
+};
+
+<span class="hljs-meta">#&#x533F;&#x540D;&#x51FD;&#x6570;</span>
+<span class="hljs-keyword">auto</span> func = [<span class="hljs-comment">/*&#x5916;&#x90E8;&#x53D8;&#x91CF;*/</span>](<span class="hljs-keyword">int</span> A, <span class="hljs-keyword">int</span> B){<span class="hljs-keyword">return</span> A&gt;B;};
+</code></pre>
+<h3 id="112-vector-&#x6700;&#x503C;">1.1.2 vector &#x6700;&#x503C;</h3>
+<pre><code class="lang-cpp"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;algorithm&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;vector&gt;</span></span>
+
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>{
+<span class="hljs-built_in">vector</span>&lt;<span class="hljs-keyword">int</span>&gt; nums = {<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">4</span>,<span class="hljs-number">3</span>};
+<span class="hljs-keyword">int</span> maxValue = *max_element(nums.begin(),nums.end()); <span class="hljs-comment">// 4</span>
+<span class="hljs-keyword">int</span> minValue = *min_element(nums.begin(),nums.end()); <span class="hljs-comment">// 1</span>
+<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}
+</code></pre>
+<ul>
+<li><p>&#x53C2;&#x6570;:</p>
+<ul>
+<li><strong>first, last:</strong> &#x4E24;&#x4E2A;&#x8FED;&#x4EE3;&#x5668;&#xFF0C;&#x7528;&#x6765;&#x6307;&#x5B9A;&#x8303;&#x56F4;</li>
+<li><strong>comp:</strong> &#x4EFF;&#x51FD;&#x6570; &#x7528;&#x6765;&#x81EA;&#x5B9A;&#x4E49;&#x6392;&#x5E8F;&#x65B9;&#x6CD5;</li>
+</ul>
+</li>
+<li>&#x8FD4;&#x56DE;&#x503C;&#xFF1A;&#x6700;&#x503C;&#x5143;&#x7D20;</li>
+<li><p>&#x4F8B;&#x5B50;&#xFF1A;</p>
+<ul>
+<li><a href="http://www.cplusplus.com/reference/algorithm/min_element/" target="_blank">http://www.cplusplus.com/reference/algorithm/min_element/</a></li>
+<li><a href="http://www.cplusplus.com/reference/algorithm/max_element/" target="_blank">http://www.cplusplus.com/reference/algorithm/max_element/</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="113-vector-&#x622A;&#x53D6;">1.1.3 vector &#x622A;&#x53D6;</h3>
+<p><a href="https://blog.csdn.net/qq_40250056/article/details/114681940" target="_blank">C++&#x5BB9;&#x5668;vector&#x7684;&#x6570;&#x7EC4;&#x7247;&#x6BB5;&#x622A;&#x53D6;&#x64CD;&#x4F5C;_stitching&#x7684;&#x535A;&#x5BA2;-CSDN&#x535A;&#x5BA2;_c++ vector &#x622A;&#x53D6;</a></p>
+<h2 id="12-stack-stl-stack">1.2 stack (STL stack)</h2>
+<h3 id="121-stack-&#x58F0;&#x660E;">1.2.1 stack &#x58F0;&#x660E;</h3>
+<pre><code class="lang-cpp"><span class="hljs-keyword">template</span> &lt;<span class="hljs-keyword">class</span> T, <span class="hljs-keyword">class</span> Container = <span class="hljs-built_in">deque</span>&lt;T&gt; &gt; <span class="hljs-keyword">class</span> <span class="hljs-built_in">stack</span>;
+</code></pre>
+<blockquote>
+<p><strong>stacks</strong> are implemented as <em>container adaptors</em>, which are classes that use an encapsulated object of a specific container class as its <em>underlying container</em>, providing a specific set of member functions to access its elements. Elements are <em>pushed</em>/<em>popped</em> from the <em>&quot;back&quot;</em> of the specific container, which is known as the <em>top</em> of the stack.</p>
+<p>The underlying container may be any of the standard container class templates or some other specifically designed container class. The container shall support the following operations:</p>
+<ul>
+<li>empty</li>
+<li>size</li>
+<li>back</li>
+<li>push_back</li>
+<li>pop_back</li>
+</ul>
+<p>The standard container classes <a href="http://www.cplusplus.com/vector" target="_blank">vector</a>, <a href="http://www.cplusplus.com/deque" target="_blank">deque</a> and <a href="http://www.cplusplus.com/list" target="_blank">list</a> fulfill these requirements. By default, if no container class is specified for a particular stack class instantiation, the standard container <a href="http://www.cplusplus.com/deque" target="_blank">deque</a> is used.</p>
+</blockquote>
+<h3 id="122-stack-&#x51FD;&#x6570;">1.2.2 stack &#x51FD;&#x6570;</h3>
+<ul>
+<li><a href="http://www.cplusplus.com/reference/stack/stack/stack/" target="_blank"><strong>(constructor)</strong></a> Construct stack (public member function )</li>
+<li><a href="http://www.cplusplus.com/reference/stack/stack/empty/" target="_blank"><strong>empty</strong></a> Test whether container is empty (public member function )</li>
+<li><a href="http://www.cplusplus.com/reference/stack/stack/size/" target="_blank"><strong>size</strong></a> Return size (public member function )</li>
+<li><a href="http://www.cplusplus.com/reference/stack/stack/top/" target="_blank"><strong>top</strong></a> Access next element (public member function )</li>
+<li><a href="http://www.cplusplus.com/reference/stack/stack/push/" target="_blank"><strong>push</strong></a> Insert element (public member function )</li>
+<li><a href="http://www.cplusplus.com/reference/stack/stack/emplace/" target="_blank"><strong>emplace</strong> </a> Construct and insert element (public member function )</li>
+<li><a href="http://www.cplusplus.com/reference/stack/stack/pop/" target="_blank"><strong>pop</strong></a> Remove top element (public member function )</li>
+<li><a href="http://www.cplusplus.com/reference/stack/stack/swap/" target="_blank"><strong>swap</strong> </a> Swap contents (public member function )</li>
+</ul>
+<h2 id="13-stdstring">1.3 std::<a href="http://www.cplusplus.com/reference/string/string/" target="_blank">string</a></h2>
+<h3 id="131-stringsubstr">1.3.1 string::substr</h3>
+<pre><code class="lang-cpp"><span class="hljs-function"><span class="hljs-keyword">constexpr</span> basic_string_view
+    <span class="hljs-title">substr</span><span class="hljs-params">(size_type __pos, size_type __n = npos)</span> <span class="hljs-keyword">const</span> <span class="hljs-title">noexcept</span><span class="hljs-params">(<span class="hljs-literal">false</span>)</span>
+</span>{
+    __pos = _M_check(__pos, <span class="hljs-string">&quot;basic_string_view::substr&quot;</span>);
+    <span class="hljs-keyword">const</span> size_type __rlen = <span class="hljs-built_in">std</span>::min(__n, _M_len - __pos);
+    <span class="hljs-keyword">return</span> basic_string_view{_M_str + __pos, __rlen};
+}
+</code></pre>
+<p><strong>Parameters</strong></p>
+<ul>
+<li><p><code>pos</code></p>
+<p>Position of the first character to be copied as a substring. If this is equal to the <em><a href="http://www.cplusplus.com/string::length" target="_blank">string length</a></em>, the function returns an empty string. If this is greater than the <em><a href="http://www.cplusplus.com/string::length" target="_blank">string length</a></em>, it throws <a href="http://www.cplusplus.com/out_of_range" target="_blank">out_of_range</a>. Note: The first character is denoted by a value of <code>0</code> (not <code>1</code>).</p>
+</li>
+<li><p><code>len</code></p>
+<p>Number of characters to include in the substring (==if the string is shorter, as many characters as possible are used==). A value of <a href="http://www.cplusplus.com/string::npos" target="_blank">string::npos</a> indicates all characters until the end of the string.</p>
+</li>
+<li><a href="http://www.cplusplus.com/size_t" target="_blank"><code>size_t</code></a> is an unsigned integral type (the same as member type <a href="http://www.cplusplus.com/string#types" target="_blank">string::size_type</a>).</li>
+</ul>
+<p><strong>Return Value</strong></p>
+<p>A <a href="http://www.cplusplus.com/string" target="_blank">string</a> object with a substring of this object.</p>
+<p><strong>Example</strong></p>
+<pre><code class="lang-cpp"><span class="hljs-comment">// string::substr</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;iostream&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;string&gt;</span></span>
+
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span> <span class="hljs-params">()</span>
+</span>{
+  <span class="hljs-built_in">std</span>::<span class="hljs-built_in">string</span> str=<span class="hljs-string">&quot;We think in generalities, but we live in details.&quot;</span>;
+                                           <span class="hljs-comment">// (quoting Alfred N. Whitehead)</span>
+
+  <span class="hljs-built_in">std</span>::strin-g str2 = str.substr (<span class="hljs-number">3</span>,<span class="hljs-number">5</span>);     <span class="hljs-comment">// &quot;think&quot;</span>
+
+  <span class="hljs-built_in">std</span>::<span class="hljs-keyword">size_t</span> pos = str.find(<span class="hljs-string">&quot;live&quot;</span>);      <span class="hljs-comment">// position of &quot;live&quot; in str</span>
+
+  <span class="hljs-built_in">std</span>::<span class="hljs-built_in">string</span> str3 = str.substr (pos);     <span class="hljs-comment">// get from &quot;live&quot; to the end</span>
+
+  <span class="hljs-built_in">std</span>::<span class="hljs-built_in">cout</span> &lt;&lt; str2 &lt;&lt; <span class="hljs-string">&apos; &apos;</span> &lt;&lt; str3 &lt;&lt; <span class="hljs-string">&apos;\n&apos;</span>;
+
+  <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}
+</code></pre>
+<h2 id="14-stdpriorityqueue">1.4 std::priority_queue</h2>
+<h3 id="141-abstract">1.4.1 Abstract</h3>
+<p>Priority queues are a type of container adaptors, specifically designed such that <strong>its first element is always the ==greatest== of (by default) the elements it contains</strong>, according to some <em>strict weak ordering</em> criterion.</p>
+<p>Priority queues are implemented as <em>container adaptors</em>, which are classes that use an encapsulated object of a specific container class as its <em>underlying container</em>, providing a specific set of member functions to access its elements. <strong>Elements are <em>popped</em> from the <em>==&quot;back&quot;==</em> of the specific container</strong>, which is known as <strong>the ==<em>top</em>== of the priority queue</strong>.</p>
+<p>The standard container classes <a href="http://www.cplusplus.com/vector" target="_blank">vector</a> and <a href="http://www.cplusplus.com/deque" target="_blank">deque</a> fulfill these the basic function requirements of priority queues. By default, if no container class is specified for a particular <a href="http://www.cplusplus.com/priority_queue" target="_blank">priority_queue</a> class instantiation, the standard container <a href="http://www.cplusplus.com/vector" target="_blank">vector</a> is used.</p>
+<h3 id="142-template-parameters">1.4.2 Template parameters</h3>
+<p><strong>T</strong></p>
+<blockquote>
+<p>Type of the elements. Aliased as member type priority_queue::value_type.</p>
+</blockquote>
+<p><strong>Container</strong></p>
+<blockquote>
+<pre><code>Type of the internal*underlying container* object where the elements are stored.
+</code></pre><p>Its value_type shall be T. Aliased as member type priority_queue::container_type.</p>
+</blockquote>
+<p><strong>Compare</strong></p>
+<blockquote>
+<pre><code>A binary predicate that takes two elements (of type T) as arguments and returns a`bool`.
+The expression `comp(a,b)`, where comp is an object of this type and a and b are elements in the container,  **shall return `true` if a is considered to go before b in the *strict weak ordering* the function defines.**
+The priority_queue uses this function to maintain the elements sorted in a way that preserves *heap properties* (i.e., that the element popped is the last according to this *strict weak ordering*).
+This can be a function pointer or a function object, and **defaults to `less&lt;T&gt;`**, which returns the same as applying the *less-than operator* (`a&lt;b`).
+</code></pre></blockquote>
+<ul>
+<li><a href="http://www.cplusplus.com/reference/queue/priority_queue/priority_queue/" target="_blank"><strong>(constructor)</strong></a> Construct priority queue (public member function )</li>
+<li><a href="http://www.cplusplus.com/reference/queue/priority_queue/empty/" target="_blank"><strong>empty</strong></a> Test whether container is empty (public member function )</li>
+<li><a href="http://www.cplusplus.com/reference/queue/priority_queue/size/" target="_blank"><strong>size</strong></a> Return size (public member function )</li>
+<li><a href="http://www.cplusplus.com/reference/queue/priority_queue/top/" target="_blank"><strong>top</strong></a> Access top element (public member function )</li>
+<li><a href="http://www.cplusplus.com/reference/queue/priority_queue/push/" target="_blank"><strong>push</strong></a> Insert element (public member function )</li>
+<li><a href="http://www.cplusplus.com/reference/queue/priority_queue/emplace/" target="_blank"><strong>emplace</strong> </a> Construct and insert element (public member function )</li>
+<li><a href="http://www.cplusplus.com/reference/queue/priority_queue/pop/" target="_blank"><strong>pop</strong></a> Remove top element (public member function )</li>
+<li><a href="http://www.cplusplus.com/reference/queue/priority_queue/swap/" target="_blank"><strong>swap</strong> </a> Swap contents (public member function )</li>
+</ul>
+<pre><code class="lang-cpp"><span class="hljs-keyword">class</span> student{
+    <span class="hljs-keyword">public</span>:
+        <span class="hljs-keyword">int</span> age;
+        <span class="hljs-built_in">string</span> name;
+        <span class="hljs-comment">/**&#x91CD;&#x8F7D;&#x5C0F;&#x4E8E;&#x64CD;&#x4F5C;&#x7B26;&#xFF0C;
+          *&#x8FD9;&#x91CC;&#x5FC5;&#x987B;&#x662F;&#x975E;&#x6210;&#x5458;&#x51FD;&#x6570;&#x624D;&#x53EF;&#x4EE5;
+        */</span>
+        <span class="hljs-keyword">friend</span> <span class="hljs-keyword">bool</span> <span class="hljs-keyword">operator</span>&lt;(<span class="hljs-keyword">const</span> student&amp; a, <span class="hljs-keyword">const</span> student &amp; b){
+            <span class="hljs-keyword">return</span> a.age &lt; b.age;
+        }
+};
+
+<span class="hljs-comment">/**&#x53EF;&#x8C03;&#x7528;&#x7684;&#x51FD;&#x6570;&#x64CD;&#x4F5C;&#x7B26;&#x7684;&#x5BF9;&#x8C61;*/</span>
+<span class="hljs-keyword">struct</span> mycmp{
+    <span class="hljs-function"><span class="hljs-keyword">bool</span> <span class="hljs-title">operator</span><span class="hljs-params">()</span><span class="hljs-params">(<span class="hljs-keyword">const</span> student &amp; a,<span class="hljs-keyword">const</span> student &amp; b)</span></span>{
+        <span class="hljs-keyword">return</span> a.age &lt; b.age;
+    }
+};
+
+<span class="hljs-comment">/**&#x51FD;&#x6570;&#x6307;&#x9488;*/</span>
+<span class="hljs-function"><span class="hljs-keyword">bool</span> <span class="hljs-title">cmpfunc</span><span class="hljs-params">(<span class="hljs-keyword">const</span> student&amp; a, <span class="hljs-keyword">const</span> student&amp; b)</span></span>{
+    <span class="hljs-keyword">return</span> a.age &lt; b.age;
+}
+
+<span class="hljs-comment">/**&#x9ED8;&#x8BA4;&#x4F7F;&#x7528;student&#x7684;oprator&lt;&#x6765;&#x8FDB;&#x884C;&#x6BD4;&#x8F83;*/</span>
+priority_queue&lt;student&gt; que1;
+
+<span class="hljs-comment">/**&#x4F7F;&#x7528;&#x91CD;&#x8F7D;&#x51FD;&#x6570;&#x64CD;&#x4F5C;&#x7B26;&#x7684;&#x7C7B;&#x5BF9;&#x8C61;*/</span>
+priority_queue&lt;student,<span class="hljs-built_in">vector</span>&lt;student&gt;,mycmp&gt; que2;
+
+<span class="hljs-comment">/**&#x5B9A;&#x4E49;&#x4E00;&#x4E0B;&#x6BD4;&#x8F83;&#x51FD;&#x6570;*/</span>
+<span class="hljs-keyword">auto</span> cmp = [](<span class="hljs-keyword">const</span> student &amp; a,<span class="hljs-keyword">const</span> student &amp; b){<span class="hljs-keyword">return</span> a.age &lt; b.age;};
+<span class="hljs-comment">/**
+  *    &#x9700;&#x8981;&#x628A;lambda&#x8868;&#x8FBE;&#x5F0F;&#x4F5C;&#x4E3A;&#x4F18;&#x5148;&#x961F;&#x5217;&#x53C2;&#x6570;&#x8FDB;&#x884C;&#x521D;&#x59CB;&#x5316;
+  * &#x5E76;&#x4E14;&#x6307;&#x5B9A;priority_queue&#x7684;&#x6A21;&#x677F;&#x5B9E;&#x53C2;&#xFF0C;decltype(cmp)&#xFF0C;c++11 declare type&#xFF0C;&#x58F0;&#x660E;&#x7C7B;&#x578B;
+  * &#x53EF;&#x4EE5;&#x8BA4;&#x4E3A;&#x662F;&#x786E;&#x5B9A;&#x51FD;&#x6570;&#x7684;&#x7C7B;&#x578B;
+  * bool (const student &amp; a,const student &amp; b)
+**/</span>
+priority_queue&lt;student,<span class="hljs-built_in">vector</span>&lt;student&gt;,<span class="hljs-keyword">decltype</span>(cmp)&gt; que4(cmp);
+
+<span class="hljs-comment">/*&#x4F7F;&#x7528;&#x51FD;&#x6570;&#x5BF9;&#x8C61;&#x6765;&#x5B9A;&#x4E49;&#x8FD9;&#x4E2A;&#x6BD4;&#x8F83;&#x51FD;&#x6570;&#x539F;&#x578B;*/</span>
+<span class="hljs-comment">//lambda &#x51FD;&#x6570;&#x6765;&#x521D;&#x59CB;&#x5316;&#x51FD;&#x6570;&#x5BF9;&#x8C61;</span>
+priority_queue&lt;student,<span class="hljs-built_in">vector</span>&lt;student&gt;,function&lt;<span class="hljs-keyword">bool</span>(<span class="hljs-keyword">const</span> student&amp;,<span class="hljs-keyword">const</span> student&amp;)&gt;&gt; que5(cmp);
+
+<span class="hljs-comment">//&#x51FD;&#x6570;&#x6307;&#x9488;&#x6765;&#x521D;&#x59CB;&#x5316;&#x51FD;&#x6570;&#x5BF9;&#x8C61;</span>
+priority_queue&lt;student,<span class="hljs-built_in">vector</span>&lt;student&gt;,function&lt;<span class="hljs-keyword">bool</span>(<span class="hljs-keyword">const</span> student&amp;,<span class="hljs-keyword">const</span> student&amp;)&gt;&gt; que6(cmpfunc);
+
+<span class="hljs-comment">/**&#x51FD;&#x6570;&#x5BF9;&#x8C61;*/</span>
+function&lt;<span class="hljs-keyword">bool</span>(<span class="hljs-keyword">const</span> student&amp;,<span class="hljs-keyword">const</span> student &amp;)&gt; func(cmpfunc);
+priority_queue&lt;student,<span class="hljs-built_in">vector</span>&lt;student&gt;,function&lt;<span class="hljs-keyword">bool</span>(<span class="hljs-keyword">const</span> student&amp;,<span class="hljs-keyword">const</span> student&amp;)&gt;&gt; que7(func);
+</code></pre>
+<h2 id="15-stdunorderedmap">1.5 std::unordered_map</h2>
+<h3 id="151-unorderedmap&#x7684;&#x904D;&#x5386;">1.5.1 unordered_map&#x7684;&#x904D;&#x5386;</h3>
+<pre><code class="lang-cpp"><span class="hljs-built_in">unordered_map</span>&lt;<span class="hljs-keyword">int</span>,<span class="hljs-keyword">int</span>&gt; mp;
+
+<span class="hljs-comment">// &#x8FED;&#x4EE3;&#x5668;&#x904D;&#x5386;</span>
+<span class="hljs-built_in">unordered_map</span>&lt;<span class="hljs-keyword">int</span>,<span class="hljs-keyword">int</span>&gt;::iterator it;
+it = mp.begin();
+<span class="hljs-keyword">while</span>(it!=mp.end()){
+    <span class="hljs-comment">//do something</span>
+    it++;
+}
+<span class="hljs-comment">// for&#x904D;&#x5386;</span>
+<span class="hljs-keyword">for</span>(<span class="hljs-keyword">auto</span> [key,val] : mp){
+    <span class="hljs-comment">//do something</span>
+}
+</code></pre>
+<h1 id="2-functions">2 Functions</h1>
+<h2 id="21-rand">2.1 rand()</h2>
+<p>C++&#x4E2D;rand() &#x51FD;&#x6570;&#x7684;&#x7528;&#x6CD5;</p>
+<ol>
+<li>rand()&#x4E0D;&#x9700;&#x8981;&#x53C2;&#x6570;&#xFF0C;&#x5B83;&#x4F1A;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x4ECE;0&#x5230;&#x6700;&#x5927;&#x968F;&#x673A;&#x6570;&#x7684;&#x4EFB;&#x610F;&#x6574;&#x6570;&#xFF0C;&#x6700;&#x5927;&#x968F;&#x673A;&#x6570;&#x7684;&#x5927;&#x5C0F;&#x901A;&#x5E38;&#x662F;&#x56FA;&#x5B9A;&#x7684;&#x4E00;&#x4E2A;&#x5927;&#x6574;&#x6570;&#x3002;</li>
+<li>&#x5982;&#x679C;&#x4F60;&#x8981;&#x4EA7;&#x751F; <code>0~99</code> &#x8FD9;100&#x4E2A;&#x6574;&#x6570;&#x4E2D;&#x7684;&#x4E00;&#x4E2A;&#x968F;&#x673A;&#x6574;&#x6570;&#xFF0C;&#x53EF;&#x4EE5;&#x8868;&#x8FBE;&#x4E3A;&#xFF1A;<code>int num = rand() % 100;</code> &#x8FD9;&#x6837;&#xFF0C;num&#x7684;&#x503C;&#x5C31;&#x662F;&#x4E00;&#x4E2A;0~99&#x4E2D;&#x7684;&#x4E00;&#x4E2A;&#x968F;&#x673A;&#x6570;&#x4E86;&#x3002;</li>
+</ol>
+<p>3&#x3001;&#x5982;&#x679C;&#x8981;&#x4EA7;&#x751F;1~100&#xFF0C;&#x5219;&#x662F;&#x8FD9;&#x6837;&#xFF1A;<code>int num = rand() % 100 + 1;</code></p>
+<p>4&#x3001;&#x603B;&#x7ED3;&#x6765;&#x8BF4;&#xFF0C;&#x53EF;&#x4EE5;&#x8868;&#x793A;&#x4E3A;&#xFF1A;</p>
+<pre><code class="lang-cpp"><span class="hljs-keyword">int</span> num = rand() % n +a;
+<span class="hljs-comment">// &#x5176;&#x4E2D;&#x7684;a&#x662F;&#x8D77;&#x59CB;&#x503C;&#xFF0C;n-1+a&#x662F;&#x7EC8;&#x6B62;&#x503C;&#xFF0C;n&#x662F;&#x6574;&#x6570;&#x7684;&#x8303;&#x56F4;&#x3002;</span>
+</code></pre>
+<p>5&#x3001;&#x4E00;&#x822C;&#x6027;&#xFF1A;<code>rand() % (b-a+1)+ a ;</code>    &#x5C31;&#x8868;&#x793A;  a~b &#x4E4B;&#x95F4;&#x7684;&#x4E00;&#x4E2A;&#x968F;&#x673A;&#x6574;&#x6570;&#x3002;</p>
+<p>6&#x3001;&#x82E5;&#x8981;&#x4EA7;&#x751F;0~1&#x4E4B;&#x95F4;&#x7684;&#x5C0F;&#x6570;&#xFF0C;&#x5219;&#x53EF;&#x4EE5;&#x5148;&#x53D6;&#x5F97;0~10&#x7684;&#x6574;&#x6570;&#xFF0C;&#x7136;&#x540E;&#x5747;&#x9664;&#x4EE5;10&#x5373;&#x53EF;&#x5F97;&#x5230;&#x201C;&#x968F;&#x673A;&#x5230;&#x5341;&#x5206;&#x4F4D;&#x201D;&#x7684;10&#x4E2A;&#x968F;&#x673A;&#x5C0F;&#x6570;&#x3002;&#x82E5;&#x8981;&#x5F97;&#x5230;&#x201C;&#x968F;&#x673A;&#x5230;&#x767E;&#x5206;&#x4F4D;&#x201D;&#x7684;&#x968F;&#x673A;&#x5C0F;&#x6570;&#xFF0C;&#x5219;&#x9700;&#x8981;&#x5148;&#x5F97;&#x5230;0~100&#x7684;10&#x4E2A;&#x6574;&#x6570;&#xFF0C;&#x7136;&#x540E;&#x5747;&#x9664;&#x4EE5;100&#xFF0C;&#x5176;&#x5B83;&#x60C5;&#x51B5;&#x4F9D; &#x6B64;&#x7C7B;&#x63A8;&#x3002;</p>
+<p>7&#x3001;&#x901A;&#x5E38;rand()&#x4EA7;&#x751F;&#x7684;&#x968F;&#x673A;&#x6570;&#x5728;&#x6BCF;&#x6B21;&#x8FD0;&#x884C;&#x7684;&#x65F6;&#x5019;&#x90FD;&#x662F;&#x4E0E;&#x4E0A;&#x4E00;&#x6B21;&#x76F8;&#x540C;&#x7684;&#xFF0C;&#x8FD9;&#x6837;&#x662F;&#x4E3A;&#x4E86;&#x4FBF;&#x4E8E;&#x7A0B;&#x5E8F;&#x7684;&#x8C03;&#x8BD5;&#x3002;&#x82E5;&#x8981;&#x4EA7;&#x751F;&#x6BCF;&#x6B21;&#x4E0D;&#x540C;&#x7684;&#x968F;&#x673A;&#x6570;&#xFF0C;&#x5219;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;srand( seed )&#x51FD;&#x6570;&#x8FDB;&#x884C;&#x4EA7;&#x751F;&#x968F;&#x673A;&#x5316;&#x79CD;&#x5B50;&#xFF0C;&#x968F;&#x7740;seed&#x7684;&#x4E0D;&#x540C;&#xFF0C;&#x5C31;&#x80FD;&#x591F;&#x4EA7;&#x751F;&#x4E0D;&#x540C;&#x7684;&#x968F;&#x673A;&#x6570;&#x3002;</p>
+<p>8&#x3001;&#x8FD8;&#x53EF;&#x4EE5;&#x5305;&#x542B;time.h&#x5934;&#x6587;&#x4EF6;&#xFF0C;&#x7136;&#x540E;&#x4F7F;&#x7528;srand(time(0))&#x6765;&#x4F7F;&#x7528;&#x5F53;&#x524D;&#x65F6;&#x95F4;&#x4F7F;&#x968F;&#x673A;&#x6570;&#x53D1;&#x751F;&#x5668;&#x968F;&#x673A;&#x5316;&#xFF0C;&#x8FD9;&#x6837;&#x5C31;&#x53EF;&#x4EE5;&#x4FDD;&#x8BC1;&#x6BCF;&#x4E24;&#x6B21;&#x8FD0;&#x884C;&#x65F6;&#x53EF;&#x4EE5;&#x5F97;&#x5230;&#x4E0D;&#x540C;&#x7684;&#x968F;&#x673A;&#x6570;&#x5E8F;&#x5217;&#xFF0C;&#x540C;&#x65F6;&#x8FD9;&#x8981;&#x6C42;&#x7A0B;&#x5E8F;&#x7684;&#x4E24;&#x6B21;&#x8FD0;&#x884C;&#x7684;&#x95F4;&#x9694;&#x8D85;&#x8FC7;1&#x79D2;&#x3002;</p>
+<h2 id="22-atoi---tostring">2.2 atoi()  | to_string()</h2>
+<h3 id="221-string-&#x8F6C;-int">2.2.1 string &#x8F6C; int</h3>
+<pre><code class="lang-cpp"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;iostream&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;string&gt;</span></span>
+
+<span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> <span class="hljs-built_in">std</span>;
+
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span>
+</span>{
+    <span class="hljs-keyword">char</span>* s = <span class="hljs-string">&quot;1234&quot;</span>;
+    <span class="hljs-function"><span class="hljs-built_in">string</span> <span class="hljs-title">str</span><span class="hljs-params">(<span class="hljs-string">&quot;5678&quot;</span>)</span></span>;
+
+    <span class="hljs-keyword">int</span> intS = atoi(s);
+
+    <span class="hljs-comment">//&#x6B64;&#x5199;&#x6CD5;&#x4F1A;&#x62A5;&#x9519;</span>
+    <span class="hljs-comment">//int intStr = atoi(str);</span>
+    <span class="hljs-comment">//&#x9700;&#x5148;&#x5C06;string&#x8F6C;&#x6210;char*</span>
+    <span class="hljs-keyword">int</span> intStr = atoi(str.c_str());
+
+    <span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-string">&quot;char* &#x8F6C;int:    &quot;</span> &lt;&lt; intS &lt;&lt; <span class="hljs-built_in">endl</span>;
+    <span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-string">&quot;string &#x8F6C;int:    &quot;</span> &lt;&lt; intStr &lt;&lt; <span class="hljs-built_in">endl</span>;
+
+    system(<span class="hljs-string">&quot;pause&quot;</span>);
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}
+</code></pre>
+<h3 id="222-int-&#x8F6C;-string">2.2.2 int &#x8F6C; string</h3>
+<pre><code class="lang-cpp">to_sting();
+</code></pre>
+<h2 id="23-upperbound">2.3 upper_bound()</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">default (1)</th>
+<th><code>template &lt;class ForwardIterator, class T&gt;  ForwardIterator upper_bound (ForwardIterator first, ForwardIterator last,                               const T&amp; val);</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">custom (2)</td>
+<td><code>template &lt;class ForwardIterator, class T, class Compare&gt;  ForwardIterator upper_bound (ForwardIterator first, ForwardIterator last,const T&amp; val, Compare comp);</code></td>
+</tr>
+</tbody>
+</table>
+<p>&#x8FD4;&#x56DE;&#x5927;&#x4E8E;&#x76EE;&#x6807;&#x503C;&#x7684;&#x6700;&#x5C0F;&#x503C;&#x7684;&#x8FED;&#x4EE3;&#x5668;&#x3002;</p>
+<pre><code class="lang-cpp"><span class="hljs-comment">// lower_bound/upper_bound example</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;iostream&gt;</span>     // std::cout</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;algorithm&gt;</span>    // std::lower_bound, std::upper_bound, std::sort</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;vector&gt;</span>       // std::vector</span>
+
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span> <span class="hljs-params">()</span> </span>{
+  <span class="hljs-keyword">int</span> myints[] = {<span class="hljs-number">10</span>,<span class="hljs-number">20</span>,<span class="hljs-number">30</span>,<span class="hljs-number">30</span>,<span class="hljs-number">20</span>,<span class="hljs-number">10</span>,<span class="hljs-number">10</span>,<span class="hljs-number">20</span>};
+  <span class="hljs-built_in">std</span>::<span class="hljs-built_in">vector</span>&lt;<span class="hljs-keyword">int</span>&gt; v(myints,myints+<span class="hljs-number">8</span>);           <span class="hljs-comment">// 10 20 30 30 20 10 10 20</span>
+
+  <span class="hljs-built_in">std</span>::sort (v.begin(), v.end());                <span class="hljs-comment">// 10 10 10 20 20 20 30 30</span>
+
+  <span class="hljs-built_in">std</span>::<span class="hljs-built_in">vector</span>&lt;<span class="hljs-keyword">int</span>&gt;::iterator low,up;
+  low=<span class="hljs-built_in">std</span>::lower_bound (v.begin(), v.end(), <span class="hljs-number">20</span>); <span class="hljs-comment">//          ^</span>
+  up= <span class="hljs-built_in">std</span>::upper_bound (v.begin(), v.end(), <span class="hljs-number">20</span>); <span class="hljs-comment">//                   ^</span>
+
+  <span class="hljs-built_in">std</span>::<span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-string">&quot;lower_bound at position &quot;</span> &lt;&lt; (low- v.begin()) &lt;&lt; <span class="hljs-string">&apos;\n&apos;</span>;
+  <span class="hljs-built_in">std</span>::<span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-string">&quot;upper_bound at position &quot;</span> &lt;&lt; (up - v.begin()) &lt;&lt; <span class="hljs-string">&apos;\n&apos;</span>;
+
+  <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}
+</code></pre>
+<h2 id="23-swap">2.3 swap()</h2>
+<pre><code class="lang-cpp"><span class="hljs-comment">// swap algorithm example (C++11)</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;iostream&gt;</span>     // std::cout</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;utility&gt;</span>      // std::swap</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;string&gt;</span>       // std::string</span>
+
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span> <span class="hljs-params">()</span> </span>{
+
+  <span class="hljs-keyword">int</span> x=<span class="hljs-number">10</span>, y=<span class="hljs-number">20</span>;                  <span class="hljs-comment">// x:10 y:20</span>
+  <span class="hljs-built_in">std</span>::swap(x,y);                  <span class="hljs-comment">// x:20 y:10</span>
+
+  <span class="hljs-built_in">std</span>::<span class="hljs-built_in">string</span> s = <span class="hljs-string">&quot;012345&quot;</span>;
+  <span class="hljs-built_in">std</span>::swap(s[<span class="hljs-number">0</span>],s[<span class="hljs-number">5</span>]);
+  <span class="hljs-keyword">for</span>(<span class="hljs-keyword">char</span> c : s) <span class="hljs-built_in">std</span>::<span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-string">&apos; &apos;</span> &lt;&lt; c;
+  <span class="hljs-built_in">std</span>::<span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-built_in">std</span>::<span class="hljs-built_in">endl</span>;
+
+  <span class="hljs-keyword">int</span> foo[<span class="hljs-number">4</span>];                    
+  <span class="hljs-keyword">int</span> bar[] = {<span class="hljs-number">10</span>,<span class="hljs-number">20</span>,<span class="hljs-number">30</span>,<span class="hljs-number">40</span>};     
+  <span class="hljs-built_in">std</span>::swap(foo,bar);
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i: foo) <span class="hljs-built_in">std</span>::<span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-string">&apos; &apos;</span> &lt;&lt; i;
+  <span class="hljs-built_in">std</span>::<span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-built_in">std</span>::<span class="hljs-built_in">endl</span>;
+
+
+  <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}
+</code></pre>
+<h1 id="3-grammar">3 Grammar</h1>
+<h2 id="31-lambda&#x51FD;&#x6570;">3.1 lambda&#x51FD;&#x6570;</h2>
+<pre><code>https://www.cnblogs.com/pzhfei/archive/2013/01/14/lambda_expression.html
+</code></pre><h2 id="32-&#x7C7B;&#x578B;&#x8F6C;&#x6362;">3.2 &#x7C7B;&#x578B;&#x8F6C;&#x6362;</h2>
+<pre><code>https://www.cnblogs.com/sylar5/p/6638641.html
+</code></pre>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="cppTemplate.html" class="navigation navigation-prev " aria-label="Previous page: CppTemplate">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="pythonTricks.html" class="navigation navigation-next " aria-label="Next page: PythonTricks">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"CppTricks","level":"3.4.2","depth":2,"next":{"title":"PythonTricks","level":"3.4.3","depth":2,"path":"算法题/3-Tricks/pythonTricks.md","ref":"算法题/3-Tricks/pythonTricks.md","articles":[]},"previous":{"title":"CppTemplate","level":"3.4.1","depth":2,"path":"算法题/3-Tricks/cppTemplate.md","ref":"算法题/3-Tricks/cppTemplate.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["katex","theme-comscore","folding-chapters","livereload"],"pluginsConfig":{"livereload":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"folding-chapters":{},"highlight":{},"theme-comscore":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"算法题/3-Tricks/cppTricks.md","mtime":"2022-04-27T12:53:04.483Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-08-17T10:27:45.907Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-folding-chapters/folding-chapters.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+
